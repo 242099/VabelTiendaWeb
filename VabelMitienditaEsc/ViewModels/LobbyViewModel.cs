@@ -9,7 +9,7 @@ namespace VabelMitienditaEsc.ViewModels
         private readonly MainViewModel _mainViewModel;
 
         // Propiedad expuesta a la vista que formatea el saludo dinámico
-        public string WelcomeMessage => $"¡Bienvenido, {_mainViewModel.UserName}!";
+        public string WelcomeMessage => $"¡Bienvenido, {_mainViewModel.CurrentUser?.Nombre ?? "Usuario"}!";
         public LobbyViewModel(NavigationStore navigationStore, MainViewModel mainViewModel)
         {
             _navigationStore = navigationStore;

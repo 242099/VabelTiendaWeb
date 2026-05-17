@@ -42,7 +42,7 @@ namespace VabelMitienditaEsc.ViewModels
             IsLoading = false;
             if (isValid)
             {
-                _mainViewModel.UserEmail = Email;
+                _mainViewModel.TempEmail = Email;
                 _navigationStore.CurrentViewModel = new LoginPinViewModel(_navigationStore, _authService, _mainViewModel);
             }
             else

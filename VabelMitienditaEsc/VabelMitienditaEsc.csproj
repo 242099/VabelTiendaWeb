@@ -7,16 +7,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <UserSecretsId>2ac6ce7f-deda-4c20-aec1-0d8a253194a1</UserSecretsId>
+    <ApplicationIcon>vabel_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Res\Fonts\MaterialSymbolsRounded.ttf" />
     <None Remove="Res\Images\vabel_dark.png" />
+    <None Remove="Res\Images\vabel_icon.ico" />
     <None Remove="Res\Images\vabel_white.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Content Include="vabel_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +31,7 @@
   <ItemGroup>
     <Resource Include="Res\Fonts\MaterialSymbolsRounded.ttf" />
     <Resource Include="Res\Images\vabel_dark.png" />
+    <Resource Include="Res\Images\vabel_icon.ico" />
     <Resource Include="Res\Images\vabel_white.png" />
   </ItemGroup>
 

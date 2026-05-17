@@ -41,12 +41,13 @@ namespace VabelMitienditaEsc.ViewModels
 
                 string clearTextPin = SecureStringToString(passwordBox.SecurePassword);
                 // El servicio ahora retorna una tupla con la validación y el nombre
-                var authResult = await _authService.ValidatePinAsync(_mainViewModel.UserEmail, clearTextPin);
-
+                var usuarioLogueado = await _authService.ValidatePinAsync(_mainViewModel.CurrentUser?.Email ?? _mainViewModel.TempEmail, clearTextPin);
+                // Nota: necesitarás guardar el Email temporalmente en alguna parte durante el proceso de login.
                 IsLoading = false;
-                if (authResult.IsValid)
+                if (usuarioLogueado != null)
                 {
-                    _mainViewModel.UserName = authResult.NombreUsuario; // Almacenar el nombre del usuario
+                    _mainViewModel.CurrentUser = usuarioLogueado;
+                    _mainViewModel.TempEmail = string.Empty; // Limpiamos el email temporal ya que ya no es necesario
                     _navigationStore.CurrentViewModel = new LobbyViewModel(_navigationStore, _mainViewModel);
                 }
                 else

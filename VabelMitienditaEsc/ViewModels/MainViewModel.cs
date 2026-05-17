@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using VabelMitienditaEsc.Core;
 using VabelMitienditaEsc.Services;
+using VabelMitienditaEsc.Models;
 
 namespace VabelMitienditaEsc.ViewModels
 {
@@ -17,10 +18,10 @@ namespace VabelMitienditaEsc.ViewModels
         private bool _showSidebar;
 
         [ObservableProperty]
-        private string _userEmail;
+        private Usuario _currentUser;
 
         [ObservableProperty]
-        private string _userName; // Nueva propiedad para almacenar el nombre que viene de la BD
+        private string _tempEmail; //Se utiliza durante el proceso de login para almacenar el email antes de validar el PIN
 
         public MainViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService)
         {
@@ -31,7 +32,8 @@ namespace VabelMitienditaEsc.ViewModels
             _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
         }
 
-        private void OnCurrentViewModelChanged()
+        //Este método prácticamente se encarga de actualizar la vista actual y decidir si mostrar o no la barra lateral dependiendo de qué vista se esté mostrando.
+        private void OnCurrentViewModelChanged() 
         {
             CurrentViewModel = _navigationStore.CurrentViewModel;
             ShowSidebar = CurrentViewModel is not LoginEmailViewModel &&
@@ -47,8 +49,8 @@ namespace VabelMitienditaEsc.ViewModels
         [RelayCommand]
         private void Logout()
         {
-            UserEmail = string.Empty;
-            UserName = string.Empty; // Limpieza de sesión
+            CurrentUser = null;
+            TempEmail = string.Empty;
             _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
         }
     }

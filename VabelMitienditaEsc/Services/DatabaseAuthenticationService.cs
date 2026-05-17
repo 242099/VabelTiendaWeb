@@ -1,6 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Data;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+using VabelMitienditaEsc.Models;
 
 namespace VabelMitienditaEsc.Services
 {
@@ -30,12 +32,14 @@ namespace VabelMitienditaEsc.Services
             }
         }
 
-        public async Task<(bool IsValid, string NombreUsuario)> ValidatePinAsync(string email, string pinText)
+        // Cambia el método ValidatePinAsync a esto:
+        public async Task<Usuario> ValidatePinAsync(string email, string pinText)
         {
             using (MySqlConnection conn = new MySqlConnection(_connectionString))
             {
                 await conn.OpenAsync();
-                string query = "SELECT nombre, contrasena FROM usuario WHERE email = @email AND activo = 1 LIMIT 1";
+                // Traemos todos los datos útiles del usuario
+                string query = "SELECT id_usuario, nombre, aPaterno, aMaterno, email, RFC, CURP, contrasena FROM usuario WHERE email = @email AND activo = 1 LIMIT 1";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -44,20 +48,27 @@ namespace VabelMitienditaEsc.Services
                     {
                         if (await reader.ReadAsync())
                         {
-                            string dbHash = reader.GetString(reader.GetOrdinal("contrasena"));
-                            string nombre = reader.GetString(reader.GetOrdinal("nombre"));
+                            string dbHash = reader.GetString("contrasena");
 
-                            // Comparación utilizando la librería BCrypt.Net-Next
-                            // Verify automáticamente extrae el "Salt" del hash guardado y realiza la validación
                             if (BCrypt.Net.BCrypt.Verify(pinText, dbHash))
                             {
-                                return (true, nombre);
+                                // Si la contraseña es correcta, construimos y retornamos el Modelo
+                                return new Usuario
+                                {
+                                    IdUsuario = reader.GetInt32("id_usuario"),
+                                    Nombre = reader.GetString("nombre"),
+                                    APaterno = reader.GetString("aPaterno"),
+                                    AMaterno = reader.GetString("aMaterno"),
+                                    Email = reader.GetString("email"),
+                                    RFC = reader.IsDBNull(reader.GetOrdinal("RFC")) ? string.Empty : reader.GetString("RFC"),
+                                    CURP = reader.IsDBNull(reader.GetOrdinal("CURP")) ? string.Empty : reader.GetString("CURP")
+                                };
                             }
                         }
                     }
                 }
             }
-            return (false, string.Empty);
+            return null; // Si falla la validación, devolvemos nulo
         }
     }
 }
