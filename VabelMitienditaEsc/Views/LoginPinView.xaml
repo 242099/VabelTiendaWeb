@@ -18,7 +18,7 @@
             <TextBlock Text="Ingresa tu PIN" Foreground="{StaticResource BrushPrimaryBlue}" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,5" />
             <PasswordBox x:Name="PinBox" Height="40" Padding="10" FontSize="16" Margin="0,0,0,20" MaxLength="4"/>
 
-            <TextBlock Text="{Binding ErrorMessage}" Foreground="{StaticResource BrushRed}" Margin="0,0,0,10" Visibility="{Binding HasError, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <TextBlock Text="{Binding ErrorMessage}" Foreground="{StaticResource BrushRed}" Margin="0,0,0,10" Visibility="{Binding HasError, Converter={StaticResource BooleanToVisibilityConverter}}" TextWrapping="Wrap"/>
 
             <Button Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=PinBox}" 
                     Content="Entrar" Background="{StaticResource BrushGreen}" Foreground="White" 

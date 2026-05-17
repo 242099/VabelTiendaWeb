@@ -19,8 +19,8 @@
             </Border.Effect>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text="¡Bienvenido Usuario!" FontSize="28" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}"/>
-                    <TextBlock Text="Bienvenido al sistema Vabel. Seleccione una operación en el menú lateral para comenzar." FontSize="18" Foreground="#7F8C8D" Margin="0,4,0,0"/>
+                    <TextBlock Text="{Binding WelcomeMessage}" FontSize="28" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}"/>
+                    <TextBlock Text="Este es el sistema Vabel para gestionar tu tiendita. Seleccione una operación en el menú lateral para comenzar." FontSize="18" Foreground="#7F8C8D" Margin="0,4,0,0"/>
                 </StackPanel>
             </Grid>
         </Border>

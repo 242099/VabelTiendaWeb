@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using Microsoft.Extensions.Configuration;
+using System.Configuration;
 using System.Data;
 using System.Windows;
 using VabelMitienditaEsc.Core;
@@ -16,9 +17,17 @@ namespace VabelMitienditaEsc
         {
             base.OnStartup(e);
 
-            // Inicialización de dependencias centralizadas
+            // 1. Construir la configuración leyendo los User Secrets
+            IConfiguration configuration = new ConfigurationBuilder()
+                .AddUserSecrets<App>()
+                .Build();
+
+            // 2. Extraer la cadena de conexión
+            string connectionString = configuration.GetConnectionString("DefaultConnection");
+
+            // 3. Inicializar el servicio real con la base de datos
+            DatabaseAuthenticationService authService = new DatabaseAuthenticationService(connectionString);
             NavigationStore navigationStore = new NavigationStore();
-            MockAuthenticationService authService = new MockAuthenticationService();
 
             MainViewModel mainViewModel = new MainViewModel(navigationStore, authService);
 

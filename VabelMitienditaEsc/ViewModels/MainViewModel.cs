@@ -8,7 +8,7 @@ namespace VabelMitienditaEsc.ViewModels
     public partial class MainViewModel : ViewModelBase
     {
         private readonly NavigationStore _navigationStore;
-        private readonly MockAuthenticationService _authService;
+        private readonly DatabaseAuthenticationService _authService;
 
         [ObservableProperty]
         private ViewModelBase _currentViewModel;
@@ -19,21 +19,21 @@ namespace VabelMitienditaEsc.ViewModels
         [ObservableProperty]
         private string _userEmail;
 
-        public MainViewModel(NavigationStore navigationStore, MockAuthenticationService authService)
+        [ObservableProperty]
+        private string _userName; // Nueva propiedad para almacenar el nombre que viene de la BD
+
+        public MainViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService)
         {
             _navigationStore = navigationStore;
             _authService = authService;
             _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
 
-            // Inicializar en la primera pantalla de Login
             _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
         }
 
         private void OnCurrentViewModelChanged()
         {
             CurrentViewModel = _navigationStore.CurrentViewModel;
-
-            // Determinar si se muestra la barra lateral según el tipo de ViewModel activo
             ShowSidebar = CurrentViewModel is not LoginEmailViewModel &&
                           CurrentViewModel is not LoginPinViewModel;
         }
@@ -48,6 +48,7 @@ namespace VabelMitienditaEsc.ViewModels
         private void Logout()
         {
             UserEmail = string.Empty;
+            UserName = string.Empty; // Limpieza de sesión
             _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
         }
     }

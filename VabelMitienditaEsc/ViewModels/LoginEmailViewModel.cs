@@ -9,7 +9,7 @@ namespace VabelMitienditaEsc.ViewModels
     public partial class LoginEmailViewModel : ViewModelBase
     {
         private readonly NavigationStore _navigationStore;
-        private readonly MockAuthenticationService _authService;
+        private readonly DatabaseAuthenticationService _authService;
         private readonly MainViewModel _mainViewModel;
 
         [ObservableProperty]
@@ -24,7 +24,7 @@ namespace VabelMitienditaEsc.ViewModels
         [ObservableProperty]
         private bool _isLoading;
 
-        public LoginEmailViewModel(NavigationStore navigationStore, MockAuthenticationService authService, MainViewModel mainViewModel)
+        public LoginEmailViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService, MainViewModel mainViewModel)
         {
             _navigationStore = navigationStore;
             _authService = authService;
@@ -47,7 +47,7 @@ namespace VabelMitienditaEsc.ViewModels
             }
             else
             {
-                ErrorMessage = "El correo ingresado no es válido.";
+                ErrorMessage = "Correo no encontrado en la base de datos o cuenta inactiva.";
                 HasError = true;
             }
         }

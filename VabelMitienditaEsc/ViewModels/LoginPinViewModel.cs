@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security;
+﻿using System.Security;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -13,7 +12,7 @@ namespace VabelMitienditaEsc.ViewModels
     public partial class LoginPinViewModel : ViewModelBase
     {
         private readonly NavigationStore _navigationStore;
-        private readonly MockAuthenticationService _authService;
+        private readonly DatabaseAuthenticationService _authService;
         private readonly MainViewModel _mainViewModel;
 
         [ObservableProperty]
@@ -25,7 +24,7 @@ namespace VabelMitienditaEsc.ViewModels
         [ObservableProperty]
         private bool _isLoading;
 
-        public LoginPinViewModel(NavigationStore navigationStore, MockAuthenticationService authService, MainViewModel mainViewModel)
+        public LoginPinViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService, MainViewModel mainViewModel)
         {
             _navigationStore = navigationStore;
             _authService = authService;
@@ -41,11 +40,13 @@ namespace VabelMitienditaEsc.ViewModels
                 HasError = false;
 
                 string clearTextPin = SecureStringToString(passwordBox.SecurePassword);
-                bool isAuthenticated = await _authService.ValidatePinAsync(_mainViewModel.UserEmail, clearTextPin);
+                // El servicio ahora retorna una tupla con la validación y el nombre
+                var authResult = await _authService.ValidatePinAsync(_mainViewModel.UserEmail, clearTextPin);
 
                 IsLoading = false;
-                if (isAuthenticated)
+                if (authResult.IsValid)
                 {
+                    _mainViewModel.UserName = authResult.NombreUsuario; // Almacenar el nombre del usuario
                     _navigationStore.CurrentViewModel = new LobbyViewModel(_navigationStore, _mainViewModel);
                 }
                 else
