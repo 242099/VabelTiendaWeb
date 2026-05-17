@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/bfiwwtLcqI=",
+  "dgSpecHash": "0UXLOMRLgic=",
   "success": true,
-  "projectFilePath": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abrah\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512"
+  ],
   "logs": []
 }

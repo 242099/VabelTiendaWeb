@@ -8,4 +8,24 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Res\Fonts\MaterialSymbolsRounded.ttf" />
+    <None Remove="Res\Images\vabel_dark.png" />
+    <None Remove="Res\Images\vabel_white.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Res\Fonts\MaterialSymbolsRounded.ttf" />
+    <Resource Include="Res\Images\vabel_dark.png" />
+    <Resource Include="Res\Images\vabel_white.png" />
+  </ItemGroup>
+
 </Project>
