@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System.Configuration;
-using System.Data;
 using System.Windows;
 using VabelMitienditaEsc.Core;
 using VabelMitienditaEsc.Services;
@@ -31,6 +29,11 @@ namespace VabelMitienditaEsc
 
             MainViewModel mainViewModel = new MainViewModel(navigationStore, authService);
 
+            // 4. Inicializar y conectar el servicio de Arduino
+            // Recuerda modificar "COM3" por el puerto asignado a tu Arduino en el Administrador de dispositivos.
+            mainViewModel.DispositivoArduino = new ArduinoService("COM5");
+            mainViewModel.DispositivoArduino.Connect();
+
             MainWindow window = new MainWindow
             {
                 DataContext = mainViewModel
@@ -38,5 +41,4 @@ namespace VabelMitienditaEsc
             window.Show();
         }
     }
-
 }
