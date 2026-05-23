@@ -39,7 +39,11 @@ namespace VabelMitienditaEsc.Services
             {
                 await conn.OpenAsync();
                 // Traemos todos los datos útiles del usuario
-                string query = "SELECT id_usuario, nombre, aPaterno, aMaterno, email, RFC, CURP, contrasena,id_rol, id_tienda FROM usuario WHERE email = @email AND activo = 1 LIMIT 1";
+                string query = @"SELECT u.id_usuario, u.nombre, u.aPaterno, u.aMaterno, u.email, u.contrasena, 
+                                u.RFC, u.CURP, u.id_rol, u.id_tienda, r.nombre_rol 
+                         FROM usuario u
+                         INNER JOIN roles_usuario r ON u.id_rol = r.id_rol
+                         WHERE u.email = @email AND u.activo = 1";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -63,7 +67,8 @@ namespace VabelMitienditaEsc.Services
                                     RFC = reader.IsDBNull(reader.GetOrdinal("RFC")) ? string.Empty : reader.GetString("RFC"),
                                     CURP = reader.IsDBNull(reader.GetOrdinal("CURP")) ? string.Empty : reader.GetString("CURP"),
                                     IdRol = reader.GetInt32("id_rol"),
-                                    IdTienda = reader.GetInt32("id_tienda")
+                                    IdTienda = reader.GetInt32("id_tienda"),
+                                    NombreRol = reader.GetString("nombre_rol")
                                 };
                             }
                         }

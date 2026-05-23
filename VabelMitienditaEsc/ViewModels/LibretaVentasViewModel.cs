@@ -1,10 +1,11 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
 using VabelMitienditaEsc.Core;
 using VabelMitienditaEsc.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace VabelMitienditaEsc.ViewModels
 {
@@ -41,12 +42,15 @@ namespace VabelMitienditaEsc.ViewModels
             _mainViewModel = mainViewModel;
             TopProductosList = new ObservableCollection<TopProducto>();
 
-            // Configuración de Roles basada en la BD (id_rol 1 = Dueño, 2 = Empleado)
-            // Se asume que en el modelo Usuario agregaste la propiedad IdRol
-            // Si no la tienes aún mapeada, temporalmente se valida si es nulo
-            int idRol = _mainViewModel.CurrentUser?.IdRol ?? 2;
-            EsDueno = idRol == 1;
-            RolUsuarioActual = EsDueno ? "Dueño" : "Empleado";
+            // ASIGNACIÓN COMPLETAMENTE DINÁMICA DESDE LA BASE DE DATOS
+            // Obtenemos el nombre del rol real ("Dueño", "Empleado", etc.)
+            string rolDb = _mainViewModel.CurrentUser?.NombreRol;
+
+            // Fallback de seguridad extrema: si por alguna razón la sesión fuese nula, asigna "Empleado"
+            RolUsuarioActual = !string.IsNullOrEmpty(rolDb) ? rolDb : "Empleado";
+
+            // Evaluamos permisos basados de manera exacta en la cadena de texto real de la BD
+            EsDueno = RolUsuarioActual.Equals("Dueño", StringComparison.OrdinalIgnoreCase);
 
             // Carga inicial (Histórico general)
             _ = CargarDatosDashboardAsync();

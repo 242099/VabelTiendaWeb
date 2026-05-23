@@ -15,5 +15,6 @@ namespace VabelMitienditaEsc.Models
         // así que omitimos esa propiedad en el Modelo mientras no la necesitemos.
         public int IdRol { get; set; } // 1 = Dueño, 2 = Empleado
         public int IdTienda { get; set; }
+        public string NombreRol { get; set; }
     }
 }
