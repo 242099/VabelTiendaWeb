@@ -1,0 +1,249 @@
+﻿<UserControl x:Class="VabelMitienditaEsc.Views.LibretaVentasView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewmodels="clr-namespace:VabelMitienditaEsc.ViewModels"
+             mc:Ignorable="d" 
+             Background="{StaticResource BrushBackgroundWhite}"
+             d:DesignHeight="720" d:DesignWidth="1080"
+             d:DataContext="{d:DesignInstance Type=viewmodels:LibretaVentasViewModel}">
+
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+
+    <Grid Margin="40,30,40,30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,0,0,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                <TextBlock Text="Libreta de Ventas" FontSize="28" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}"/>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <TextBlock Text="Rol activo: " FontSize="14" Foreground="#7F8C8D"/>
+                    <TextBlock Text="{Binding RolUsuarioActual}" FontSize="14" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,20,0">
+                <TextBlock Text="Periodo:" VerticalAlignment="Center" Foreground="#7F8C8D" FontWeight="SemiBold" Margin="0,0,10,0"/>
+
+                <Border Background="#F4F7F9" CornerRadius="5" Padding="5" BorderBrush="#E5E7E9" BorderThickness="1">
+                    <StackPanel Orientation="Horizontal">
+                        <DatePicker SelectedDate="{Binding FechaInicio, UpdateSourceTrigger=PropertyChanged}" 
+                                    Width="120" BorderThickness="0" Background="Transparent" />
+                        <TextBlock Text="  -  " VerticalAlignment="Center" Foreground="#BDC3C7"/>
+                        <DatePicker SelectedDate="{Binding FechaFin, UpdateSourceTrigger=PropertyChanged}" 
+                                    Width="120" BorderThickness="0" Background="Transparent" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0,0,0,30" Visibility="{Binding EsDueno, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="White" CornerRadius="10" Margin="0,0,20,0" Padding="20">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="1" Color="#000000" Opacity="0.05"/>
+                </Border.Effect>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Style="{StaticResource IconStyle}" Text="&#xebd1;" Foreground="{StaticResource BrushGreen}" FontSize="20" Margin="0,0,10,0"/>
+                        <TextBlock Text="Ventas" FontSize="14" FontWeight="SemiBold" Foreground="#95A5A6" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <TextBlock Text="{Binding TotalGanancias, StringFormat={}{0:C}}" FontSize="28" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" Background="White" CornerRadius="10" Margin="0,0,20,0" Padding="20">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="1" Color="#000000" Opacity="0.05"/>
+                </Border.Effect>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Style="{StaticResource IconStyle}" Text="&#xebd9;" Foreground="{StaticResource BrushRed}" FontSize="20" Margin="0,0,10,0"/>
+                        <TextBlock Text="Gastos" FontSize="14" FontWeight="SemiBold" Foreground="#95A5A6" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <TextBlock Text="{Binding TotalGastos, StringFormat={}{0:C}}" FontSize="28" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="2" Background="White" CornerRadius="10" Padding="20">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="1" Color="#000000" Opacity="0.05"/>
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Top Productos Más Vendidos" FontSize="14" FontWeight="SemiBold" Foreground="#34495E" Margin="0,0,0,8"/>
+
+                    <Grid Grid.Row="1" Height="4" Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Background="{StaticResource BrushPrimaryBlue}" CornerRadius="2,0,0,2"/>
+                        <Border Grid.Column="1" Background="{StaticResource BrushGreen}"/>
+                        <Border Grid.Column="2" Background="{StaticResource BrushYellow}"/>
+                        <Border Grid.Column="3" Background="{StaticResource BrushRed}" CornerRadius="0,2,2,0"/>
+                    </Grid>
+
+                    <ItemsControl Grid.Row="2" ItemsSource="{Binding TopProductosList}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,4">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Posicion}" FontWeight="Bold" Foreground="#BDC3C7" Width="20"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding NombreProducto}" Foreground="#34495E" FontSize="13"/>
+                                    <TextBlock Grid.Column="2" Text="{Binding CantidadVendida, StringFormat={}{0} pz}" FontWeight="SemiBold" Foreground="#7F8C8D" FontSize="13"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <StackPanel HorizontalAlignment="Left" Width="400">
+                <TextBlock Text="Opciones Operativas" FontSize="16" FontWeight="SemiBold" Foreground="#34495E" Margin="0,0,0,15"/>
+
+                <Button Command="{Binding VerHistorialVentasCommand}" 
+                        Background="White" BorderBrush="#E5E7E9" BorderThickness="1" 
+                        Padding="15" Margin="0,0,0,10" Cursor="Hand" HorizontalContentAlignment="Stretch">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8" Padding="{TemplateBinding Padding}">
+                                <ContentPresenter/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#F8F9F9"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Style="{StaticResource IconStyle}" Text="&#xe8cc;" Foreground="{StaticResource BrushPrimaryBlue}" FontSize="24" Margin="0,0,15,0"/>
+                        <TextBlock Grid.Column="1" Text="Ver historial de ventas" FontSize="16" FontWeight="SemiBold" Foreground="#34495E" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Style="{StaticResource IconStyle}" Text="&#xe5cc;" Foreground="#BDC3C7" FontSize="20" VerticalAlignment="Center"/>
+                    </Grid>
+                </Button>
+
+                <Button Command="{Binding VerHistorialGastosCommand}" 
+                        Background="White" BorderBrush="#E5E7E9" BorderThickness="1" 
+                        Padding="15" Margin="0,0,0,10" Cursor="Hand" HorizontalContentAlignment="Stretch">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8" Padding="{TemplateBinding Padding}">
+                                <ContentPresenter/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#F8F9F9"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Style="{StaticResource IconStyle}" Text="&#xf053;" Foreground="{StaticResource BrushRed}" FontSize="24" Margin="0,0,15,0"/>
+                        <TextBlock Grid.Column="1" Text="Ver historial de gastos" FontSize="16" FontWeight="SemiBold" Foreground="#34495E" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Style="{StaticResource IconStyle}" Text="&#xe5cc;" Foreground="#BDC3C7" FontSize="20" VerticalAlignment="Center"/>
+                    </Grid>
+                </Button>
+
+                <Button Command="{Binding VerReportesFinancierosCommand}" 
+                        Visibility="{Binding EsDueno, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        Background="White" BorderBrush="#E5E7E9" BorderThickness="1" 
+                        Padding="15" Margin="0,0,0,10" Cursor="Hand" HorizontalContentAlignment="Stretch">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8" Padding="{TemplateBinding Padding}">
+                                <ContentPresenter/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#F8F9F9"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Style="{StaticResource IconStyle}" Text="&#xe4fc;" Foreground="{StaticResource BrushGreen}" FontSize="24" Margin="0,0,15,0"/>
+                        <TextBlock Grid.Column="1" Text="Reportes financieros" FontSize="16" FontWeight="SemiBold" Foreground="#34495E" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Style="{StaticResource IconStyle}" Text="&#xe5cc;" Foreground="#BDC3C7" FontSize="20" VerticalAlignment="Center"/>
+                    </Grid>
+                </Button>
+
+                <Button Command="{Binding VerMetodosPagoCommand}" 
+                        Visibility="{Binding EsDueno, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        Background="White" BorderBrush="#E5E7E9" BorderThickness="1" 
+                        Padding="15" Margin="0,0,0,10" Cursor="Hand" HorizontalContentAlignment="Stretch">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8" Padding="{TemplateBinding Padding}">
+                                <ContentPresenter/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#F8F9F9"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Style="{StaticResource IconStyle}" Text="&#xe8a1;" Foreground="{StaticResource BrushYellow}" FontSize="24" Margin="0,0,15,0"/>
+                        <TextBlock Grid.Column="1" Text="Métodos de pago" FontSize="16" FontWeight="SemiBold" Foreground="#34495E" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Style="{StaticResource IconStyle}" Text="&#xe5cc;" Foreground="#BDC3C7" FontSize="20" VerticalAlignment="Center"/>
+                    </Grid>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

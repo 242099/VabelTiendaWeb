@@ -13,5 +13,7 @@ namespace VabelMitienditaEsc.Models
         public string CURP { get; set; }
         // Nota: Por seguridad, en memoria rara vez guardamos la contraseña, 
         // así que omitimos esa propiedad en el Modelo mientras no la necesitemos.
+        public int IdRol { get; set; } // 1 = Dueño, 2 = Empleado
+        public int IdTienda { get; set; }
     }
 }

@@ -47,6 +47,14 @@ namespace VabelMitienditaEsc.ViewModels
         }
 
         [RelayCommand]
+        private void NavigateToLibretaVentas()
+        {
+            // Pasamos 'this' (el MainViewModel) para que la Libreta de Ventas 
+            // pueda leer los datos de '_currentUser' y su 'IdRol' real de la base de datos
+            _navigationStore.CurrentViewModel = new LibretaVentasViewModel(_navigationStore, this);
+        }
+
+        [RelayCommand]
         private void Logout()
         {
             CurrentUser = null;

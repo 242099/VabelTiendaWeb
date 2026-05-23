@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\abrah\source\repos\EscuelaGit\VabelTiendaWeb\VabelMitienditaEsc\App.xaml
-61252156821
+7178771300
 1-832987202
-18728276852
+21-87103813
 218592057427
-MainWindow.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Views\LobbyView.xaml;Views\LoginEmailView.xaml;Views\LoginPinView.xaml;
+MainWindow.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Views\LibretaVentasView.xaml;Views\LobbyView.xaml;Views\LoginEmailView.xaml;Views\LoginPinView.xaml;
 
-False
+True
 

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:core="clr-namespace:VabelMitienditaEsc.Core" 
         xmlns:viewmodels="clr-namespace:VabelMitienditaEsc.ViewModels" 
+        xmlns:views="clr-namespace:VabelMitienditaEsc.Views"
         d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -13,6 +14,9 @@
         Title="Vabel" Height="720" Width="1080">
     <Window.Resources>
         <core:SidebarWidthConverter x:Key="SidebarWidthConverter" />
+        <DataTemplate DataType="{x:Type viewmodels:LibretaVentasViewModel}">
+            <views:LibretaVentasView/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -59,7 +63,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Style="{StaticResource SidebarButtonStyle}">
+                    <Button Command="{Binding NavigateToLibretaVentasCommand}" Style="{StaticResource SidebarButtonStyle}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource IconStyle}" Text="&#xe865;" Margin="0,0,15,0" />
                             <TextBlock Text="Libreta de ventas" VerticalAlignment="Center"/>
