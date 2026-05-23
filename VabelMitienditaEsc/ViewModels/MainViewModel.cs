@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using VabelMitienditaEsc.Core;
-using VabelMitienditaEsc.Services;
 using VabelMitienditaEsc.Models;
+using VabelMitienditaEsc.Services;
 
 namespace VabelMitienditaEsc.ViewModels
 {
@@ -23,6 +23,9 @@ namespace VabelMitienditaEsc.ViewModels
         [ObservableProperty]
         private string _tempEmail; //Se utiliza durante el proceso de login para almacenar el email antes de validar el PIN
 
+        // AGREGA ESTA LÍNEA PARA QUE EL ARDUINO SEA ACCESIBLE DESDE CUALQUIER VISTA
+        public ArduinoService DispositivoArduino { get; set; }
+
         public MainViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService)
         {
             _navigationStore = navigationStore;
@@ -33,7 +36,7 @@ namespace VabelMitienditaEsc.ViewModels
         }
 
         //Este método prácticamente se encarga de actualizar la vista actual y decidir si mostrar o no la barra lateral dependiendo de qué vista se esté mostrando.
-        private void OnCurrentViewModelChanged() 
+        private void OnCurrentViewModelChanged()
         {
             CurrentViewModel = _navigationStore.CurrentViewModel;
             ShowSidebar = CurrentViewModel is not LoginEmailViewModel &&

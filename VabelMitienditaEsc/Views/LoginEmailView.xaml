@@ -5,25 +5,111 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:VabelMitienditaEsc.Views"
              mc:Ignorable="d" 
-             Background="{StaticResource BrushBackgroundWhite}"
-             d:DesignHeight="450" d:DesignWidth="800">
+             Background="#FFFFFF"
+             d:DesignHeight="720" d:DesignWidth="1080">
+
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+
+        <Style x:Key="RoundedTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="Foreground" Value="#555555"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="25" 
+                                BorderBrush="#CCCCCC" 
+                                BorderThickness="1">
+                            <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" Margin="15,0"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#A5D6D9"/>
+            <Setter Property="Foreground" Value="#12788A"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="28">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#8CC5C8"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
+
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
-            <Image Source="/Res/Images/vabel_dark.png" Height="80" Width="Auto" Margin="0,0,0,10" />
-            <TextBlock Text="Vabel" FontSize="24" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+        <Grid.RowDefinitions>
+            <!-- Altura aumentada proporcionalmente para la cabecera -->
+            <RowDefinition Height="280"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <TextBlock Text="Ingresa tu Correo Electrónico" Foreground="{StaticResource BrushPrimaryBlue}" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,5" />
-            <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" 
-                     Height="40" Padding="10" FontSize="16" Margin="0,0,0,20"/>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Imagen un poco más grande para el nuevo espacio -->
+            <Image Source="/Res/Images/vabel_dark.png" Height="120" Width="Auto" Margin="0,0,0,25" />
+            <TextBlock 
+                       Foreground="#12788A" 
+                       FontSize="26" 
+                       FontWeight="Medium" 
+                       TextAlignment="Center"><Run Text="Vabel App"/><LineBreak/></TextBlock>
 
-            <TextBlock Text="{Binding ErrorMessage}" Foreground="{StaticResource BrushRed}" Margin="0,0,0,10" Visibility="{Binding HasError, Converter={StaticResource BooleanToVisibilityConverter}}" TextWrapping="Wrap"/>
-
-            <Button Command="{Binding NextCommand}" Content="Siguiente" 
-                    Background="{StaticResource BrushPrimaryBlue}" Foreground="White" 
-                    Height="45" FontSize="16" FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+            <!-- Tamaño de fuente aumentado -->
         </StackPanel>
+
+        <!-- El radio de las esquinas se mantiene, o se puede subir ligeramente (ej. 35) -->
+        <Border Grid.Row="1" Background="#15869B" CornerRadius="35,35,0,0">
+            <Grid>
+                <!-- Formulario más ancho para que no se vea como una tira delgada -->
+                <StackPanel HorizontalAlignment="Center" Width="450" Margin="0,80,0,0">
+                    <TextBlock Text="Ingresa tu correo" 
+                               Foreground="#FFFFFF" 
+                               FontSize="24" 
+                               FontWeight="Medium" 
+                               HorizontalAlignment="Center" 
+                               Margin="0,0,0,25" />
+
+                    <!-- TextBox más alto y con fuente más grande -->
+                    <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" 
+                             Style="{StaticResource RoundedTextBoxStyle}"
+                             Height="60" FontSize="20" Margin="0,0,0,25"/>
+
+                    <TextBlock Text="{Binding ErrorMessage}" 
+                               Foreground="#FFCDCD" 
+                               FontSize="16"
+                               Margin="0,0,0,15" 
+                               Visibility="{Binding HasError, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                               TextWrapping="Wrap" 
+                               HorizontalAlignment="Center" 
+                               TextAlignment="Center"/>
+
+                    <!-- Botón más alto y con fuente más grande -->
+                    <Button Command="{Binding NextCommand}" 
+                            Content="Continuar" 
+                            Style="{StaticResource RoundedButtonStyle}"
+                            Height="60" FontSize="20" Cursor="Hand"/>
+                </StackPanel>
+
+                <TextBlock Text="Vabel v1.0.0" 
+                           Foreground="#FFFFFF" 
+                           FontSize="14" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Bottom" 
+                           Margin="0,0,0,30"/>
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>
