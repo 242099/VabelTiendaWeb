@@ -130,7 +130,12 @@
         </Grid>
 
         <Grid Grid.Row="2">
-            <StackPanel HorizontalAlignment="Left" Width="400">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" HorizontalAlignment="Left" Width="300" Grid.ColumnSpan="3">
                 <TextBlock Text="Opciones Operativas" FontSize="16" FontWeight="SemiBold" Foreground="#34495E" Margin="0,0,0,15"/>
 
                 <Button Command="{Binding VerHistorialVentasCommand}" 
@@ -244,6 +249,168 @@
                 </Button>
 
             </StackPanel>
+            <Border Grid.Column="1" Background="White" CornerRadius="16" Padding="25" Margin="20,0,0,0">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="2" Color="#000000" Opacity="0.04"/>
+                </Border.Effect>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Margin="0,0,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="{Binding TituloHistorial}" FontSize="20" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}" VerticalAlignment="Center" TextWrapping="Wrap"/>
+
+                        <Button Grid.Column="1" 
+                    Command="{Binding MostrarFormularioNuevoMetodoCommand}"
+                    Background="{StaticResource BrushPrimaryBlue}" 
+                    Foreground="White"
+                    Padding="15,8"
+                    Cursor="Hand"
+                    Visibility="{Binding MostrarMetodosPago, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" CornerRadius="20" Padding="{TemplateBinding Padding}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Style="{StaticResource IconStyle}" Text="&#xe3c9;" FontSize="16" Foreground="White" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                            <TextBlock Text="Agregar" FontSize="14" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
+                          Visibility="{Binding MostrarTablaHistorial, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <ItemsControl ItemsSource="{Binding HistorialFiltrado}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Button Command="{Binding DataContext.VerDetalleTransaccionCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                    CommandParameter="{Binding}" Margin="0,0,0,12" Background="Transparent" BorderThickness="0" Cursor="Hand">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border x:Name="CardBorder" Background="White" BorderThickness="1" BorderBrush="#E5E8E8" CornerRadius="12" Padding="15">
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="Auto"/>
+                                                                <ColumnDefinition Width="*"/>
+                                                                <ColumnDefinition Width="Auto"/>
+                                                            </Grid.ColumnDefinitions>
+
+                                                            <Border x:Name="IconBorder" Grid.Column="0" Width="48" Height="48" CornerRadius="10" Background="#EBF5FB" Margin="0,0,15,0">
+                                                                <TextBlock x:Name="IconText" Style="{StaticResource IconStyle}" Text="{Binding Icono}" Foreground="{StaticResource BrushPrimaryBlue}" FontSize="24"/>
+                                                            </Border>
+
+                                                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                                                <TextBlock Text="{Binding Concepto}" FontSize="15" FontWeight="SemiBold" Foreground="#2C3E50" Margin="0,0,0,4" TextTrimming="CharacterEllipsis"/>
+                                                                <StackPanel Orientation="Horizontal">
+                                                                    <TextBlock Text="ID: " FontSize="13" Foreground="#95A5A6"/>
+                                                                    <TextBlock Text="{Binding Id}" FontSize="13" Foreground="#95A5A6" FontWeight="Medium" Margin="0,0,8,0"/>
+                                                                    <TextBlock Text="•" FontSize="13" Foreground="#BDC3C7" Margin="0,0,8,0"/>
+                                                                    <TextBlock Text="{Binding Fecha, StringFormat=\{0:dd MMM yyyy - HH:mm\}}" FontSize="13" Foreground="#7F8C8D"/>
+                                                                </StackPanel>
+                                                            </StackPanel>
+
+                                                            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                                                <TextBlock x:Name="MontoText" Text="{Binding Monto, StringFormat=\{0:C\}}" FontSize="16" FontWeight="Bold" Foreground="#27AE60" HorizontalAlignment="Right" Margin="0,0,0,6"/>
+                                                                <Border Background="#F2F4F4" CornerRadius="6" Padding="8,3" HorizontalAlignment="Right">
+                                                                    <TextBlock Text="{Binding Tipo}" FontSize="11" FontWeight="SemiBold" Foreground="#7F8C8D"/>
+                                                                </Border>
+                                                            </StackPanel>
+                                                        </Grid>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter TargetName="CardBorder" Property="Background" Value="#F8F9F9"/>
+                                                            <Setter TargetName="CardBorder" Property="BorderBrush" Value="#D5DBDB"/>
+                                                        </Trigger>
+                                                        <DataTrigger Binding="{Binding EsVenta}" Value="False">
+                                                            <Setter TargetName="IconBorder" Property="Background" Value="#FDEDEC"/>
+                                                            <Setter TargetName="IconText" Property="Foreground" Value="{StaticResource BrushRed}"/>
+                                                            <Setter TargetName="MontoText" Property="Foreground" Value="{StaticResource BrushRed}"/>
+                                                        </DataTrigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                        </Button>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
+                          Visibility="{Binding MostrarMetodosPago, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <ItemsControl ItemsSource="{Binding HistorialFiltrado}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Background="White" BorderThickness="1" BorderBrush="#E5E8E8" CornerRadius="12" Padding="15" Margin="0,0,0,12">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Border Grid.Column="0" Width="44" Height="44" CornerRadius="22" Background="#F2F4F4" Margin="0,0,15,0">
+                                                    <TextBlock Style="{StaticResource IconStyle}" Text="{Binding Icono}" Foreground="#7F8C8D" FontSize="20"/>
+                                                </Border>
+
+                                                <TextBlock Grid.Column="1" Text="{Binding Concepto}" FontSize="15" FontWeight="SemiBold" Foreground="#2C3E50" VerticalAlignment="Center"/>
+
+                                                <Border Grid.Column="2" Background="#E8F8F5" CornerRadius="6" Padding="10,4" VerticalAlignment="Center">
+                                                    <TextBlock Text="{Binding MetodoPago}" FontSize="12" FontWeight="Bold" Foreground="#117A65"/>
+                                                </Border>
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+
+                        <StackPanel Visibility="{Binding MostrarFormularioMetodoPago, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        VerticalAlignment="Top" Margin="10,20,10,0">
+
+                            <TextBlock Text="Nombre del método de pago" FontSize="14" FontWeight="SemiBold" Foreground="#34495E" Margin="0,0,0,8"/>
+                            <TextBox Text="{Binding NuevoMetodoPagoNombre, UpdateSourceTrigger=PropertyChanged}" 
+                         Padding="12" FontSize="14" BorderThickness="1" BorderBrush="#BDC3C7" Margin="0,0,0,20">
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="8"/>
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+
+                            <Button Command="{Binding RegistrarMetodoPagoRealCommand}"
+                        Background="{StaticResource BrushYellow}" 
+                        Foreground="White" 
+                        Padding="20,12" 
+                        FontSize="15" 
+                        FontWeight="Bold" 
+                        Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" CornerRadius="8" Padding="{TemplateBinding Padding}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                Guardar Método de Pago
+                            </Button>
+                        </StackPanel>
+
+                    </Grid>
+                </Grid>
+            </Border>
         </Grid>
     </Grid>
 </UserControl>
