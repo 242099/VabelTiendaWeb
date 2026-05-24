@@ -2,14 +2,15 @@
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/slnx.sqlite
-/.vs/VSWorkspaceState.json
-/VabelMitienditaEsc/.vs/VabelMitienditaEsc/v17/.suo
-/VabelMitienditaEsc/.vs/VabelMitienditaEsc/v17/DocumentLayout.json
-/VabelMitienditaEsc/obj/Debug/net9.0-windows/VabelMitienditaEsc.AssemblyInfoInputs.cache
-/VabelMitienditaEsc/obj/Debug/net9.0-windows/VabelMitienditaEsc.assets.cache
-/VabelMitienditaEsc/obj/Debug/net9.0-windows/VabelMitienditaEsc.GeneratedMSBuildEditorConfig.editorconfig
-/VabelMitienditaEsc/obj/Debug/net9.0-windows/VabelMitienditaEsc_MarkupCompile.i.cache
+/VabelMitienditaEsc/.vs/VabelMitienditaEsc/DesignTimeBuild/.dtbcache.v2
+/VabelMitienditaEsc/.vs/VabelMitienditaEsc/v17/.futdcache.v2
+/VabelMitienditaEsc/.vs/VabelMitienditaEsc/v17/DocumentLayout.backup.json
+/VabelMitienditaEsc/obj/Debug/net9.0-windows/App.g.i.cs
+/VabelMitienditaEsc/obj/Debug/net9.0-windows/VabelMitienditaEsc.designer.runtimeconfig.json
+/VabelMitienditaEsc/obj/project.assets.json
+/VabelMitienditaEsc/obj/project.nuget.cache
+/VabelMitienditaEsc/obj/VabelMitienditaEsc.csproj.nuget.dgspec.json
+/VabelMitienditaEsc/obj/VabelMitienditaEsc.csproj.nuget.g.props
 /VabelMitienditaEsc/.vs/VabelMitienditaEsc/v17/.suo
 /VabelMitienditaEsc/.vs/VabelMitienditaEsc/v17/DocumentLayout.json
 /VabelMitienditaEsc/obj/Debug/net9.0-windows/VabelMitienditaEsc.AssemblyInfoInputs.cache
@@ -24,3 +25,5 @@
 /VabelMitienditaEsc/obj/Debug/net9.0-windows/VabelMitienditaEsc_MarkupCompile.i.cache
 /VabelMitienditaEsc/.vs/VabelMitienditaEsc/v17/.suo
 /VabelMitienditaEsc/obj/Debug/net9.0-windows/App.g.i.cs
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
