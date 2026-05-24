@@ -19,6 +19,9 @@
             <DataTemplate DataType="{x:Type viewmodels:LobbyViewModel}">
                 <views:LobbyView />
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:GastoViewModel}">
+                <views:GastoView />
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

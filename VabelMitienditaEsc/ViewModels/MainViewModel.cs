@@ -60,6 +60,12 @@ namespace VabelMitienditaEsc.ViewModels
         }
 
         [RelayCommand]
+        private void NavigateToGasto()
+        {
+            _navigationStore.CurrentViewModel = new GastoViewModel(_navigationStore, this);
+        }
+
+        [RelayCommand]
         private void Logout()
         {
             CurrentUser = null;
