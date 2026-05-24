@@ -31,13 +31,13 @@
         </StackPanel>
 
         <!-- FORMULARIO (Fondo azul con bordes redondeados) -->
-        <Border Grid.Row="1" Background="#15869B" CornerRadius="20,20,0,0">
+        <Border Grid.Row="1" Background="{StaticResource BrushPrimaryBlue}" CornerRadius="20,20,0,0">
             <Grid>
                 <StackPanel HorizontalAlignment="Center" Width="450" Margin="0,60,0,0">
                     
                     <!-- Texto cambiado a Blanco para que resalte en el fondo azul -->
                     <TextBlock Text="Ingresa tu PIN" 
-                               Foreground="#FFFFFF" 
+                               Foreground="White" 
                                FontSize="26" 
                                FontWeight="SemiBold" 
                                HorizontalAlignment="Center"
@@ -79,12 +79,17 @@
                     <Button Command="{Binding BackCommand}" 
                             Content="Regresar" 
                             FontSize="20"
-                            Background="#d43c2f" 
-                            Foreground="#FFFFFF" 
+                            Background="{StaticResource BrushLightBlue}" 
+                            Foreground="{StaticResource BrushPrimaryBlue}" 
                             Height="50" 
                             BorderThickness="0" 
                             Cursor="Hand"/>
-                            
+                    <TextBlock Text="Vabel v1.0.0" 
+                            Foreground="#FFFFFF" 
+                            FontSize="14" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Bottom" 
+                            Margin="0,20,0,0"/>        
                 </StackPanel>
             </Grid>
         </Border>

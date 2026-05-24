@@ -20,7 +20,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Border Background="{TemplateBinding Background}" 
-                                CornerRadius="25" 
+                                CornerRadius="10" 
                                 BorderBrush="#CCCCCC" 
                                 BorderThickness="1">
                             <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" Margin="15,0"/>
@@ -37,7 +37,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="28">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="10">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
@@ -59,25 +59,23 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <!-- Imagen un poco más grande para el nuevo espacio -->
-            <Image Source="/Res/Images/vabel_dark.png" Height="120" Width="Auto" Margin="0,0,0,25" />
-            <TextBlock 
-                       Foreground="#12788A" 
-                       FontSize="26" 
-                       FontWeight="Medium" 
-                       TextAlignment="Center"><Run Text="Vabel App"/><LineBreak/></TextBlock>
+            <Image Source="/Res/Images/vabel_dark.png" Height="120" Width="Auto" Margin="0,0,0,15" />
 
-            <!-- Tamaño de fuente aumentado -->
+            <TextBlock Text="Vabel" 
+               FontSize="36" 
+               FontWeight="Bold" 
+               Foreground="{StaticResource BrushPrimaryBlue}" 
+               HorizontalAlignment="Center"/>
         </StackPanel>
 
         <!-- El radio de las esquinas se mantiene, o se puede subir ligeramente (ej. 35) -->
         <Border Grid.Row="1" Background="#15869B" CornerRadius="20,20,0,0">
             <Grid>
                 <!-- Formulario más ancho para que no se vea como una tira delgada -->
-                <StackPanel HorizontalAlignment="Center" Width="450" Margin="0,80,0,0">
+                <StackPanel HorizontalAlignment="Center" Width="450" Margin="0,60,0,0">
                     <TextBlock Text="Ingresa tu correo" 
                                Foreground="#FFFFFF" 
-                               FontSize="24" 
+                               FontSize="26" 
                                FontWeight="Medium" 
                                HorizontalAlignment="Center" 
                                Margin="0,0,0,25" />

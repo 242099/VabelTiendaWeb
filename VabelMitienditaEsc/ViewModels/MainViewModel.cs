@@ -10,6 +10,7 @@ namespace VabelMitienditaEsc.ViewModels
     {
         private readonly NavigationStore _navigationStore;
         private readonly DatabaseAuthenticationService _authService;
+        private readonly LibretaVentasService _ventasService;
 
         [ObservableProperty]
         private ViewModelBase _currentViewModel;
@@ -26,10 +27,11 @@ namespace VabelMitienditaEsc.ViewModels
         // AGREGA ESTA LÍNEA PARA QUE EL ARDUINO SEA ACCESIBLE DESDE CUALQUIER VISTA
         public ArduinoService DispositivoArduino { get; set; }
 
-        public MainViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService)
+        public MainViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService, LibretaVentasService ventasService)
         {
             _navigationStore = navigationStore;
             _authService = authService;
+            _ventasService = ventasService;
             _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
 
             _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
@@ -54,7 +56,7 @@ namespace VabelMitienditaEsc.ViewModels
         {
             // Pasamos 'this' (el MainViewModel) para que la Libreta de Ventas 
             // pueda leer los datos de '_currentUser' y su 'IdRol' real de la base de datos
-            _navigationStore.CurrentViewModel = new LibretaVentasViewModel(_navigationStore, this);
+            _navigationStore.CurrentViewModel = new LibretaVentasViewModel(_navigationStore, this, _ventasService);
         }
 
         [RelayCommand]

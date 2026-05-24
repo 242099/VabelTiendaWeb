@@ -39,7 +39,7 @@ namespace VabelMitienditaEsc.Services
             {
                 await conn.OpenAsync();
                 // Traemos todos los datos útiles del usuario
-                string query = @"SELECT u.id_usuario, u.nombre, u.aPaterno, u.aMaterno, u.email, u.contrasena, 
+                string query = @"SELECT u.id_usuario, u.nombre, u.apellido_paterno, u.apellido_materno, u.email, u.contrasena, 
                                 u.RFC, u.CURP, u.id_rol, u.id_tienda, r.nombre_rol 
                          FROM usuario u
                          INNER JOIN roles_usuario r ON u.id_rol = r.id_rol
@@ -61,8 +61,8 @@ namespace VabelMitienditaEsc.Services
                                 {
                                     IdUsuario = reader.GetInt32("id_usuario"),
                                     Nombre = reader.GetString("nombre"),
-                                    APaterno = reader.GetString("aPaterno"),
-                                    AMaterno = reader.GetString("aMaterno"),
+                                    APaterno = reader.GetString("apellido_paterno"),
+                                    AMaterno = reader.GetString("apellido_materno"),
                                     Email = reader.GetString("email"),
                                     RFC = reader.IsDBNull(reader.GetOrdinal("RFC")) ? string.Empty : reader.GetString("RFC"),
                                     CURP = reader.IsDBNull(reader.GetOrdinal("CURP")) ? string.Empty : reader.GetString("CURP"),
