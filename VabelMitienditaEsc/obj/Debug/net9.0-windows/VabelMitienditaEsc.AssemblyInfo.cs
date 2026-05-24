@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VabelMitienditaEsc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+807325bd1a837ec6a09f30cb28866256adb6c12b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11d9e64292721202f770055c1920d368e8fb5e4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("VabelMitienditaEsc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VabelMitienditaEsc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
