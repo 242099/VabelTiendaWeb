@@ -118,7 +118,7 @@ namespace VabelMitienditaEsc.Services
                 await conn.OpenAsync();
 
                 // Mapeamos 'observaciones' como Concepto, y calculamos el total al vuelo
-                string query = @"SELECT v.id_venta, v.fecha, v.observaciones, fp.nombre_forma,
+                string query = @"SELECT v.id_venta, v.fecha, v.observaciones, fp.nombre,
                                         (SELECT COALESCE(SUM(cantidad * precio_unitario), 0) FROM detalle_ventas WHERE id_venta = v.id_venta) AS total_calculado
                                  FROM ventas v
                                  INNER JOIN formas_pago fp ON v.id_forma_pago = fp.id_forma_pago
@@ -144,7 +144,7 @@ namespace VabelMitienditaEsc.Services
                                 Tipo = "Venta",
                                 Concepto = reader.IsDBNull(reader.GetOrdinal("observaciones")) ? "Venta General" : reader.GetString("observaciones"),
                                 Monto = reader.GetDecimal("total_calculado"),
-                                MetodoPago = reader.GetString("nombre_forma"),
+                                MetodoPago = reader.GetString("nombre"),
                                 EsVenta = true,
                                 Icono = "\ue8a1"
                             });
@@ -165,8 +165,8 @@ namespace VabelMitienditaEsc.Services
 
                 // Unimos con UNION ALL las compras (cálculo de detalle) y los gastos operativos (monto directo)
                 string query = @"
-                    SELECT id, fecha, observaciones, nombre_forma, total_calculado, tipo FROM (
-                        SELECT c.id_compra AS id, c.fecha, c.observaciones, fp.nombre_forma,
+                    SELECT id, fecha, observaciones, nombre, total_calculado, tipo FROM (
+                        SELECT c.id_compra AS id, c.fecha, c.observaciones, fp.nombre,
                                (SELECT COALESCE(SUM(cantidad * precio_unitario), 0) FROM detalle_compras WHERE id_compra = c.id_compra) AS total_calculado,
                                'Compra Stock' AS tipo
                         FROM compras c
@@ -174,7 +174,7 @@ namespace VabelMitienditaEsc.Services
                         
                         UNION ALL
                         
-                        SELECT g.id_gasto AS id, g.fecha, g.descripcion AS observaciones, fp.nombre_forma,
+                        SELECT g.id_gasto AS id, g.fecha, g.descripcion AS observaciones, fp.nombre,
                                g.monto AS total_calculado,
                                'Gasto Operativo' AS tipo
                         FROM gastos_operativos g
@@ -202,7 +202,7 @@ namespace VabelMitienditaEsc.Services
                                 Tipo = reader.GetString("tipo"),
                                 Concepto = reader.IsDBNull(reader.GetOrdinal("observaciones")) ? "Sin descripción" : reader.GetString("observaciones"),
                                 Monto = reader.GetDecimal("total_calculado"),
-                                MetodoPago = reader.GetString("nombre_forma"),
+                                MetodoPago = reader.GetString("nombre"),
                                 EsVenta = false,
                                 Icono = "\uea14"
                             });
@@ -220,7 +220,7 @@ namespace VabelMitienditaEsc.Services
             using (MySqlConnection conn = new MySqlConnection(_connectionString))
             {
                 await conn.OpenAsync();
-                string query = "SELECT id_forma_pago, nombre_forma FROM formas_pago ORDER BY id_forma_pago ASC";
+                string query = "SELECT id_forma_pago, nombre FROM formas_pago ORDER BY id_forma_pago ASC";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 using (var reader = await cmd.ExecuteReaderAsync())
@@ -230,7 +230,7 @@ namespace VabelMitienditaEsc.Services
                         lista.Add(new TransaccionHistorial
                         {
                             Id = reader.GetInt32("id_forma_pago"),
-                            Concepto = reader.GetString("nombre_forma"),
+                            Concepto = reader.GetString("nombre"),
                             MetodoPago = "Activo",
                             Icono = "\ue8a1"
                         });
@@ -246,7 +246,7 @@ namespace VabelMitienditaEsc.Services
             using (MySqlConnection conn = new MySqlConnection(_connectionString))
             {
                 await conn.OpenAsync();
-                string query = "INSERT INTO formas_pago (nombre_forma) VALUES (@nombre)";
+                string query = "INSERT INTO formas_pago (nombre) VALUES (@nombre)";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@nombre", nombreForma);
