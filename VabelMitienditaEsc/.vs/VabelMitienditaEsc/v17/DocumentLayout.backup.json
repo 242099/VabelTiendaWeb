@@ -1,46 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\",
+  "WorkspaceRootPath": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\views\\lobbyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\lobbyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\viewmodels\\lobbyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\lobbyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\viewmodels\\libretaventasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\libretaventasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\models\\ventareciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:models\\ventareciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\services\\libretaventasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\libretaventasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\views\\libretaventasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\views\\libretaventasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\libretaventasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\services\\databaseauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\views\\loginpinview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\loginpinview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\views\\loginemailview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\loginemailview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\viewmodels\\libretaventasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\libretaventasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\services\\arduinoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\arduinoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\d4nok\\AppData\\Roaming\\Microsoft\\UserSecrets\\2ac6ce7f-deda-4c20-aec1-0d8a253194a1\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\services\\databaseauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\databaseauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\services\\libretaventasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\libretaventasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\models\\transaccionhistorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\models\\transaccionhistorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:models\\transaccionhistorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\viewmodels\\lobbyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\lobbyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,40 +73,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-24T15:42:06.842Z",
+              "DocumentIndex": 2,
+              "Title": "VentaReciente.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Models\\VentaReciente.cs",
+              "RelativeDocumentMoniker": "Models\\VentaReciente.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Models\\VentaReciente.cs",
+              "RelativeToolTip": "Models\\VentaReciente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T02:49:42.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DatabaseAuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\DatabaseAuthenticationService.cs",
-              "RelativeDocumentMoniker": "Services\\DatabaseAuthenticationService.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\DatabaseAuthenticationService.cs",
-              "RelativeToolTip": "Services\\DatabaseAuthenticationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "ArduinoService.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\ArduinoService.cs",
+              "RelativeDocumentMoniker": "Services\\ArduinoService.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\ArduinoService.cs",
+              "RelativeToolTip": "Services\\ArduinoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T15:35:15.693Z",
+              "WhenOpened": "2026-05-24T16:27:45.264Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\d4nok\\AppData\\Roaming\\Microsoft\\UserSecrets\\2ac6ce7f-deda-4c20-aec1-0d8a253194a1\\secrets.json",
+              "ToolTip": "C:\\Users\\d4nok\\AppData\\Roaming\\Microsoft\\UserSecrets\\2ac6ce7f-deda-4c20-aec1-0d8a253194a1\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-24T16:24:08.538Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LobbyView.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LobbyView.xaml",
+              "RelativeDocumentMoniker": "Views\\LobbyView.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LobbyView.xaml",
+              "RelativeToolTip": "Views\\LobbyView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-24T16:39:38.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LobbyViewModel.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LobbyViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LobbyViewModel.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LobbyViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LobbyViewModel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T21:28:19.229Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -91,11 +143,35 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginEmailView.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LoginEmailView.xaml",
+              "RelativeDocumentMoniker": "Views\\LoginEmailView.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LoginEmailView.xaml",
+              "RelativeToolTip": "Views\\LoginEmailView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-24T16:39:46.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "LoginPinView.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LoginPinView.xaml",
+              "RelativeDocumentMoniker": "Views\\LoginPinView.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LoginPinView.xaml",
+              "RelativeToolTip": "Views\\LoginPinView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-24T16:39:48.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LibretaVentasView.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LibretaVentasView.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LibretaVentasView.xaml",
               "RelativeDocumentMoniker": "Views\\LibretaVentasView.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LibretaVentasView.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LibretaVentasView.xaml",
               "RelativeToolTip": "Views\\LibretaVentasView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-05-23T20:35:02.211Z",
@@ -103,24 +179,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
+              "Title": "DatabaseAuthenticationService.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\DatabaseAuthenticationService.cs",
+              "RelativeDocumentMoniker": "Services\\DatabaseAuthenticationService.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\DatabaseAuthenticationService.cs",
+              "RelativeToolTip": "Services\\DatabaseAuthenticationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T15:35:15.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "LibretaVentasViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LibretaVentasViewModel.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LibretaVentasViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LibretaVentasViewModel.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LibretaVentasViewModel.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LibretaVentasViewModel.cs",
               "RelativeToolTip": "ViewModels\\LibretaVentasViewModel.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAwCkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T20:56:18.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwCsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T21:32:52.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "LibretaVentasService.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\LibretaVentasService.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\LibretaVentasService.cs",
               "RelativeDocumentMoniker": "Services\\LibretaVentasService.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\LibretaVentasService.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\LibretaVentasService.cs",
               "RelativeToolTip": "Services\\LibretaVentasService.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAYwOwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -129,24 +231,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T21:32:52.862Z",
+              "DocumentIndex": 11,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-24T15:42:06.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml.cs",
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -155,11 +256,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-05-23T21:31:08.903Z",
@@ -167,28 +268,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "TransaccionHistorial.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Models\\TransaccionHistorial.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Models\\TransaccionHistorial.cs",
               "RelativeDocumentMoniker": "Models\\TransaccionHistorial.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Models\\TransaccionHistorial.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\Models\\TransaccionHistorial.cs",
               "RelativeToolTip": "Models\\TransaccionHistorial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T23:16:35.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LobbyViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LobbyViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\LobbyViewModel.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LobbyViewModel.cs",
-              "RelativeToolTip": "ViewModels\\LobbyViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T21:28:19.229Z",
               "EditorCaption": ""
             }
           ]

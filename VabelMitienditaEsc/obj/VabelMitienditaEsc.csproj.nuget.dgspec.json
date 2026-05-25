@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj": {}
+    "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj": {
+    "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj",
+        "projectUniqueName": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj",
         "projectName": "VabelMitienditaEsc",
-        "projectPath": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj",
-        "packagesPath": "C:\\Users\\abrah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\obj\\",
+        "projectPath": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\VabelMitienditaEsc.csproj",
+        "packagesPath": "C:\\Users\\d4nok\\.nuget\\packages\\",
+        "outputPath": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\abrah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\d4nok\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "D:\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -91,7 +91,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "D:\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
