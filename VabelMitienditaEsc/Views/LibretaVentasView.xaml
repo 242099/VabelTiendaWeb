@@ -63,7 +63,7 @@
                 </Border.Effect>
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Style="{StaticResource IconStyle}" Text="&#xebd1;" Foreground="{StaticResource BrushGreen}" FontSize="20" Margin="0,0,10,0"/>
+                        <TextBlock Style="{StaticResource IconStyle}" Text="&#xeacf;" Foreground="{StaticResource BrushGreen}" FontSize="20" Margin="0,0,10,0"/>
                         <TextBlock Text="Ventas" FontSize="14" FontWeight="SemiBold" Foreground="#95A5A6" VerticalAlignment="Center"/>
                     </StackPanel>
                     <TextBlock Text="{Binding TotalGanancias, StringFormat={}{0:C}}" FontSize="28" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}"/>
@@ -76,7 +76,7 @@
                 </Border.Effect>
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Style="{StaticResource IconStyle}" Text="&#xebd9;" Foreground="{StaticResource BrushRed}" FontSize="20" Margin="0,0,10,0"/>
+                        <TextBlock Style="{StaticResource IconStyle}" Text="&#xead0;" Foreground="{StaticResource BrushRed}" FontSize="20" Margin="0,0,10,0"/>
                         <TextBlock Text="Gastos" FontSize="14" FontWeight="SemiBold" Foreground="#95A5A6" VerticalAlignment="Center"/>
                     </StackPanel>
                     <TextBlock Text="{Binding TotalGastos, StringFormat={}{0:C}}" FontSize="28" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}"/>
