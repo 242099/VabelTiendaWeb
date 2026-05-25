@@ -73,7 +73,7 @@ namespace VabelMitienditaEsc.Services
                                    id_cuenta = @id_cuenta, 
                                    id_forma_pago = @id_forma_pago, 
                                    id_tienda = @id_tienda
-                               WHERE id_gastos = @idGastos";
+                               WHERE id_gasto = @id_gasto";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -87,6 +87,7 @@ namespace VabelMitienditaEsc.Services
                         cmd.Parameters.AddWithValue("@id_cuenta", gasto.idCuenta);
                         cmd.Parameters.AddWithValue("@id_forma_pago", gasto.idFormaPago);
                         cmd.Parameters.AddWithValue("@id_tienda", gasto.idTienda);
+                        cmd.Parameters.AddWithValue("@id_gasto", gasto.idGastos);
 
                         int result = await cmd.ExecuteNonQueryAsync();
                         return result > 0;
@@ -100,6 +101,51 @@ namespace VabelMitienditaEsc.Services
             }
         }
 
+        public async Task<GastoOperativo> ObtenerGastoPorId(int idGasto)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(_connectionString))
+                {
+                    await conn.OpenAsync();
+                    string query = @"SELECT * FROM gastos_operativos WHERE id_gasto = @idGasto";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@idGasto", idGasto);
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            if (await reader.ReadAsync())
+                            {
+                                return new GastoOperativo
+                                {
+                                    idGastos = reader.GetInt32("id_gasto"),
+                                    fecha = reader.GetDateTime("fecha"),
+                                    descripcion = reader.GetString("descripcion"),
+                                    monto = reader.GetDecimal("monto"),
+                                    tasaIVA = reader.GetDecimal("tasa_iva"),
+                                    observaciones = reader.GetString("observaciones"),
+                                    idUsuario = reader.GetInt32("id_usuario"),
+                                    idProveedor = reader.GetInt32("id_proveedor"),
+                                    idCuenta = reader.GetInt32("id_cuenta"),
+                                    idFormaPago = reader.GetInt32("id_forma_pago"),
+                                    idTienda = reader.GetInt32("id_tienda")
+                                };
+                            }
+                        }
+                    }
+                }
+
+                return null;
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+
         public async Task<bool> BorrarGasto(int idGasto)
         {
             try
@@ -107,7 +153,7 @@ namespace VabelMitienditaEsc.Services
                 using (MySqlConnection conn = new MySqlConnection(_connectionString))
                 {
                     await conn.OpenAsync();
-                    string query = @"DELETE FROM gastos_operativos WHERE id_gastos = @idGastos";
+                    string query = @"DELETE FROM gastos_operativos WHERE id_gasto = @idGastos";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -133,15 +179,19 @@ namespace VabelMitienditaEsc.Services
                 using (MySqlConnection conn = new MySqlConnection(_connectionString))
                 {
                     await conn.OpenAsync();
-                    string query = @"SELECT id_gastos, fecha, descripcion, monto, 
-                               CONCAT_WS(' ', usuario.nombre, usuario.aPaterno, usuario.aMaterno) AS nombre_usuario, 
-                               proveedor.nombre_empresa, formas_pago.nombre
-                               FROM gastos_operativos 
-                               JOIN usuario ON id_usuario = usuario.id_usuario  
-                               JOIN proveedor ON id_proveedor = proveedor.id_proveedor 
-                               JOIN formas_pago ON id_forma_pago = formas_pago.id_forma_pago 
-                               WHERE id_tienda = @idTienda
-                               ORDER BY fecha DESC";
+                    string query = @"SELECT go.id_gasto, 
+                                   go.fecha, 
+                                   go.descripcion, 
+                                   go.monto, 
+                                   CONCAT_WS(' ', u.nombre, u.apellido_paterno, u.apellido_materno) AS nombre_usuario, 
+                                   COALESCE(p.nombre_empresa, 'Sin proveedor') AS nombre_empresa, 
+                                   fp.nombre
+                            FROM gastos_operativos go
+                            JOIN usuario u ON go.id_usuario = u.id_usuario  
+                            LEFT JOIN proveedor p ON go.id_proveedor = p.id_proveedor 
+                            JOIN formas_pago fp ON go.id_forma_pago = fp.id_forma_pago 
+                            WHERE go.id_tienda = @idTienda
+                            ORDER BY go.fecha DESC";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -153,7 +203,7 @@ namespace VabelMitienditaEsc.Services
                             {
                                 vistaGastos.Add(new VistaGastoOperativo
                                 {
-                                    idGastos = reader.GetInt32("id_gastos"),
+                                    idGastos = reader.GetInt32("id_gasto"),
                                     fecha = reader.GetDateTime("fecha"),
                                     descripcion = reader.GetString("descripcion"),
                                     monto = reader.GetDecimal("monto"),
@@ -175,28 +225,61 @@ namespace VabelMitienditaEsc.Services
             }
         }
 
-        public async Task<bool> BuscarGastoPorFecha(DateTime fechaInicial, DateTime fechaFinal)
+        public async Task<List<VistaGastoOperativo>> BuscarGastoPorFecha(DateTime fechaInicial, DateTime fechaFinal, int idTienda)
         {
+            List<VistaGastoOperativo> vistaGastos = new List<VistaGastoOperativo>();
+
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(_connectionString))
                 {
                     await conn.OpenAsync();
-                    string query = @"SELECT * FROM gastos_operativos WHERE fecha BETWEEN @fechaInicial AND @fechaFinal";
+                    string query = @"SELECT go.id_gasto, 
+                                   go.fecha, 
+                                   go.descripcion, 
+                                   go.monto, 
+                                   CONCAT_WS(' ', u.nombre, u.apellido_paterno, u.apellido_materno) AS nombre_usuario, 
+                                   COALESCE(p.nombre_empresa, 'Sin proveedor') AS nombre_empresa, 
+                                   fp.nombre
+                            FROM gastos_operativos go
+                            JOIN usuario u ON go.id_usuario = u.id_usuario  
+                            LEFT JOIN proveedor p ON go.id_proveedor = p.id_proveedor 
+                            JOIN formas_pago fp ON go.id_forma_pago = fp.id_forma_pago 
+                            WHERE go.fecha BETWEEN @fechaInicial AND @fechaFinal 
+                            AND go.id_tienda = @idTienda
+                            ORDER BY go.fecha DESC";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@fechaInicial", fechaInicial);
                         cmd.Parameters.AddWithValue("@fechaFinal", fechaFinal);
-                        int result = await cmd.ExecuteNonQueryAsync();
-                        return result > 0;
+                        cmd.Parameters.AddWithValue("@idTienda", idTienda);
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                vistaGastos.Add(new VistaGastoOperativo
+                                {
+                                    idGastos = reader.GetInt32("id_gasto"),
+                                    fecha = reader.GetDateTime("fecha"),
+                                    descripcion = reader.GetString("descripcion"),
+                                    monto = reader.GetDecimal("monto"),
+                                    nomUsuario = reader.GetString("nombre_usuario"),
+                                    nombreEmpresaProveedor = reader.GetString("nombre_empresa"),
+                                    formaPago = reader.GetString("nombre")
+                                });
+                            }
+                        }
                     }
                 }
+
+                return vistaGastos;
             }
             catch (MySqlException e)
             {
                 MessageBox.Show(e.Message);
-                return false;
+                return null;
             }
         }
     }

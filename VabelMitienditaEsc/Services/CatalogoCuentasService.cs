@@ -115,9 +115,10 @@ namespace VabelMitienditaEsc.Services
                 using (MySqlConnection conn = new MySqlConnection(_connectionString))
                 {
                     await conn.OpenAsync();
-                    string query = @"SELECT id_cuenta, codigo_cuenta, nombre_cuenta, tipos_cuenta.nombre_tipo, activa
+                    string query = @"SELECT id_cuenta, codigo_cuenta, nombre_cuenta, id_tipo_cuenta, activa
                                FROM catalogo_cuentas 
-                               JOIN tipos_cuenta ON id_tipo_cuenta = tipos_cuenta.id_tipo_cuenta";
+                               WHERE activa = 1
+                               ORDER BY nombre_cuenta ASC";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -131,7 +132,7 @@ namespace VabelMitienditaEsc.Services
                                     idCuenta = reader.GetInt32("id_cuenta"),
                                     codigoCuenta = reader.GetString("codigo_cuenta"),
                                     nombreCuenta = reader.GetString("nombre_cuenta"),
-                                    idTipoCuenta = reader.GetInt32("nombre_tipo"),
+                                    idTipoCuenta = reader.GetInt32("id_tipo_cuenta"),
                                     activa = reader.GetBoolean("activa")
                                 });
                             }
@@ -157,7 +158,7 @@ namespace VabelMitienditaEsc.Services
                     await conn.OpenAsync();
                     string query = @"SELECT id_cuenta, codigo_cuenta, nombre_cuenta, tipos_cuenta.nombre_tipo, activa
                                FROM catalogo_cuentas 
-                               JOIN tipos_cuenta ON id_tipo_cuenta = tipos_cuenta.id_tipo_cuenta
+                               JOIN tipos_cuenta ON catalogo_cuentas.id_tipo_cuenta = tipos_cuenta.id_tipo_cuenta
                                WHERE codigo_cuenta = @cod";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
