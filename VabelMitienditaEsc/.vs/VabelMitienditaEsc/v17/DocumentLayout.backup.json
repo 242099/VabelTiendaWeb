@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\views\\lobbyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\lobbyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\escuelagit\\vabeltiendaweb\\vabelmitienditaesc\\views\\libretaventasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\libretaventasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +70,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "LobbyView.xaml",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LobbyView.xaml",
+              "RelativeDocumentMoniker": "Views\\LobbyView.xaml",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LobbyView.xaml",
+              "RelativeToolTip": "Views\\LobbyView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-25T04:50:30.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "DatabaseAuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\DatabaseAuthenticationService.cs",
               "RelativeDocumentMoniker": "Services\\DatabaseAuthenticationService.cs",
@@ -74,12 +90,11 @@
               "RelativeToolTip": "Services\\DatabaseAuthenticationService.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAkwDQAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T15:35:15.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T15:35:15.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LibretaVentasView.xaml",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\LibretaVentasView.xaml",
               "RelativeDocumentMoniker": "Views\\LibretaVentasView.xaml",
@@ -91,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LibretaVentasViewModel.cs",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LibretaVentasViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LibretaVentasViewModel.cs",
@@ -99,12 +114,11 @@
               "RelativeToolTip": "ViewModels\\LibretaVentasViewModel.cs",
               "ViewState": "AgIAAL8AAAAAAAAAAAAUwM0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T20:56:18.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T20:56:18.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LibretaVentasService.cs",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\LibretaVentasService.cs",
               "RelativeDocumentMoniker": "Services\\LibretaVentasService.cs",
@@ -112,12 +126,11 @@
               "RelativeToolTip": "Services\\LibretaVentasService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAMIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T14:31:53.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T14:31:53.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
@@ -125,12 +138,11 @@
               "RelativeToolTip": "ViewModels\\MainViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T21:32:52.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T21:32:52.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -142,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -150,24 +162,22 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T15:42:09.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T15:42:09.04Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-23T21:31:08.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T21:31:08.903Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TransaccionHistorial.cs",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\Models\\TransaccionHistorial.cs",
               "RelativeDocumentMoniker": "Models\\TransaccionHistorial.cs",
@@ -175,12 +185,11 @@
               "RelativeToolTip": "Models\\TransaccionHistorial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T23:16:35.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T23:16:35.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LobbyViewModel.cs",
               "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\EscuelaGit\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\LobbyViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LobbyViewModel.cs",
@@ -188,8 +197,7 @@
               "RelativeToolTip": "ViewModels\\LobbyViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T21:28:19.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T21:28:19.229Z"
             }
           ]
         }
