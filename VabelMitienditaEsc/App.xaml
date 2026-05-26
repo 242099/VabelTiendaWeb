@@ -19,6 +19,12 @@
             <DataTemplate DataType="{x:Type viewmodels:LobbyViewModel}">
                 <views:LobbyView />
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:LibretaVentasViewModel}">
+                <views:LibretaVentasView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:NuevaVentaViewModel}">
+                <views:NuevaVentaView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

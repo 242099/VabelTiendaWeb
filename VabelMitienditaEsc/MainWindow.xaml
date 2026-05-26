@@ -14,12 +14,6 @@
         Title="Vabel" Height="720" Width="1080">
     <Window.Resources>
         <core:SidebarWidthConverter x:Key="SidebarWidthConverter" />
-        <DataTemplate DataType="{x:Type viewmodels:LibretaVentasViewModel}">
-            <views:LibretaVentasView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodels:NuevaVentaViewModel}">
-            <views:NuevaVentaView/>
-        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
