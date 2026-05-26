@@ -6,9 +6,6 @@ using VabelMitienditaEsc.ViewModels;
 
 namespace VabelMitienditaEsc
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
         protected override void OnStartup(StartupEventArgs e)
@@ -23,15 +20,18 @@ namespace VabelMitienditaEsc
             // 2. Extraer la cadena de conexión
             string connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            // 3. Inicializar el servicio real con la base de datos
+            // 3. Inicializar los servicios
             DatabaseAuthenticationService authService = new DatabaseAuthenticationService(connectionString);
             NavigationStore navigationStore = new NavigationStore();
             LibretaVentasService ventasService = new LibretaVentasService(connectionString);
+            GastosOperativosService gastosService = new GastosOperativosService(connectionString);
+            ProveedorService proveedorService = new ProveedorService(connectionString);
+            FormasPagoService formasPagoService = new FormasPagoService(connectionString);
+            CatalogoCuentasService catalogoCuentasService = new CatalogoCuentasService(connectionString);
 
-            MainViewModel mainViewModel = new MainViewModel(navigationStore, authService, ventasService);
+            MainViewModel mainViewModel = new MainViewModel(navigationStore, authService, ventasService, gastosService, proveedorService, formasPagoService, catalogoCuentasService);
 
             // 4. Inicializar y conectar el servicio de Arduino
-            // Recuerda modificar "COM3" por el puerto asignado a tu Arduino en el Administrador de dispositivos.
             mainViewModel.DispositivoArduino = new ArduinoService("COM5");
             mainViewModel.DispositivoArduino.Connect();
 

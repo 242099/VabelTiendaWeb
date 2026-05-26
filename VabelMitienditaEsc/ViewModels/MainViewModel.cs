@@ -11,6 +11,10 @@ namespace VabelMitienditaEsc.ViewModels
         private readonly NavigationStore _navigationStore;
         private readonly DatabaseAuthenticationService _authService;
         private readonly LibretaVentasService _ventasService;
+        private readonly GastosOperativosService _gastosService;
+        private readonly ProveedorService _proveedorService;
+        private readonly FormasPagoService _formasPagoService;
+        private readonly CatalogoCuentasService _catalogoCuentasService;
 
         [ObservableProperty]
         private ViewModelBase _currentViewModel;
@@ -27,11 +31,17 @@ namespace VabelMitienditaEsc.ViewModels
         // AGREGA ESTA LÍNEA PARA QUE EL ARDUINO SEA ACCESIBLE DESDE CUALQUIER VISTA
         public ArduinoService DispositivoArduino { get; set; }
 
-        public MainViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService, LibretaVentasService ventasService)
+        public MainViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService, 
+            LibretaVentasService ventasService, GastosOperativosService gastosService, ProveedorService proveedorService, 
+            FormasPagoService formasPagoService, CatalogoCuentasService catalogoCuentasService)
         {
             _navigationStore = navigationStore;
             _authService = authService;
             _ventasService = ventasService;
+            _gastosService = gastosService;
+            _proveedorService = proveedorService;
+            _formasPagoService = formasPagoService;
+            _catalogoCuentasService = catalogoCuentasService;
             _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
 
             _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
@@ -62,7 +72,7 @@ namespace VabelMitienditaEsc.ViewModels
         [RelayCommand]
         private void NavigateToGasto()
         {
-            _navigationStore.CurrentViewModel = new GastoViewModel(_navigationStore, this);
+            _navigationStore.CurrentViewModel = new GastoViewModel(_navigationStore, this, _gastosService, _proveedorService, _formasPagoService, _catalogoCuentasService);
         }
 
         [RelayCommand]

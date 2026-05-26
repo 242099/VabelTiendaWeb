@@ -81,9 +81,9 @@ namespace VabelMitienditaEsc.Services
                         cmd.Parameters.AddWithValue("@descripcion", gasto.descripcion);
                         cmd.Parameters.AddWithValue("@monto", gasto.monto);
                         cmd.Parameters.AddWithValue("@tasa_iva", gasto.tasaIVA);
-                        cmd.Parameters.AddWithValue("@observaciones", gasto.observaciones);
+                        cmd.Parameters.AddWithValue("@observaciones", (object)gasto.observaciones ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@id_usuario", gasto.idUsuario);
-                        cmd.Parameters.AddWithValue("@id_proveedor", gasto.idProveedor);
+                        cmd.Parameters.AddWithValue("@id_proveedor", (object)gasto.idProveedor ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@id_cuenta", gasto.idCuenta);
                         cmd.Parameters.AddWithValue("@id_forma_pago", gasto.idFormaPago);
                         cmd.Parameters.AddWithValue("@id_tienda", gasto.idTienda);
@@ -125,9 +125,9 @@ namespace VabelMitienditaEsc.Services
                                     descripcion = reader.GetString("descripcion"),
                                     monto = reader.GetDecimal("monto"),
                                     tasaIVA = reader.GetDecimal("tasa_iva"),
-                                    observaciones = reader.GetString("observaciones"),
+                                    observaciones = reader.IsDBNull(reader.GetOrdinal("observaciones")) ? null : reader.GetString("observaciones"),
                                     idUsuario = reader.GetInt32("id_usuario"),
-                                    idProveedor = reader.GetInt32("id_proveedor"),
+                                    idProveedor = reader.IsDBNull(reader.GetOrdinal("id_proveedor")) ? (int?)null : reader.GetInt32("id_proveedor"),
                                     idCuenta = reader.GetInt32("id_cuenta"),
                                     idFormaPago = reader.GetInt32("id_forma_pago"),
                                     idTienda = reader.GetInt32("id_tienda")
