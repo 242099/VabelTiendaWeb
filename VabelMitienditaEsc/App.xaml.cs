@@ -26,9 +26,11 @@ namespace VabelMitienditaEsc
             // 3. Inicializar el servicio real con la base de datos
             DatabaseAuthenticationService authService = new DatabaseAuthenticationService(connectionString);
             NavigationStore navigationStore = new NavigationStore();
-            LibretaVentasService ventasService = new LibretaVentasService(connectionString);
+            LibretaVentasService libretaventasService = new LibretaVentasService(connectionString);
+            InventarioService inventarioService = new InventarioService(connectionString);
+            VentasService ventasService = new VentasService(connectionString);
 
-            MainViewModel mainViewModel = new MainViewModel(navigationStore, authService, ventasService);
+            MainViewModel mainViewModel = new MainViewModel(navigationStore, authService, libretaventasService, inventarioService, ventasService);
 
             // 4. Inicializar y conectar el servicio de Arduino
             // Recuerda modificar "COM3" por el puerto asignado a tu Arduino en el Administrador de dispositivos.

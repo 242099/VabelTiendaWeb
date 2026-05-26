@@ -14,5 +14,8 @@
     <Compile Update="Views\LoginPinView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\NuevaVentaView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
