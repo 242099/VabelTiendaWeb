@@ -14,6 +14,7 @@ namespace VabelMitienditaEsc.ViewModels
         private readonly LibretaVentasService _libretaventasService;
         private readonly InventarioService _inventarioService;
         private readonly VentasService _ventasService;
+        private readonly TiendaService _tiendaService;
 
         [ObservableProperty]
         private ViewModelBase _currentViewModel;
@@ -35,13 +36,15 @@ namespace VabelMitienditaEsc.ViewModels
             DatabaseAuthenticationService authService, 
             LibretaVentasService libretaventasService,
             InventarioService inventarioService,
-            VentasService ventasService)
+            VentasService ventasService,
+            TiendaService tiendaService)
         {
             _navigationStore = navigationStore;
             _authService = authService;
             _libretaventasService = libretaventasService;
             _inventarioService = inventarioService;
             _ventasService = ventasService;
+            _tiendaService = tiendaService;
 
             _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
 
@@ -65,7 +68,13 @@ namespace VabelMitienditaEsc.ViewModels
         [RelayCommand]
         private void NavigateToNuevaVenta()
         {
-            _navigationStore.CurrentViewModel = new NuevaVentaViewModel(_navigationStore, this, _inventarioService, _ventasService);
+            _navigationStore.CurrentViewModel = new NuevaVentaViewModel(
+                _navigationStore, 
+                this, 
+                _inventarioService, 
+                _ventasService, 
+                _libretaventasService,
+                _tiendaService);
         }
 
         [RelayCommand]

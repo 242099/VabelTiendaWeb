@@ -94,21 +94,21 @@
                                         </StackPanel>
 
                                         <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                                            <TextBlock Text="{Binding PrecioVenta, StringFormat={}{0:C}}" FontSize="16" FontWeight="Bold" Foreground="#1086a0"/>
+                                            <TextBlock Text="{Binding PrecioVenta, StringFormat={}{0:C}}" FontSize="16" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}"/>
                                         </StackPanel>
 
                                         <StackPanel Grid.Column="2" VerticalAlignment="Center">
                                             <TextBlock Text="{Binding StockActual, StringFormat='Stock: {0}'}" FontSize="13" Foreground="#666666"/>
                                         </StackPanel>
 
-                                        <Button Grid.Column="3" Width="36" Height="36" Background="#d43c2f" 
+                                        <Button Grid.Column="3" Width="36" Height="36" Background="{StaticResource BrushRed}" 
                                                 BorderBrush="Transparent" Margin="5,0" Cursor="Hand"
                                                 Command="{Binding DataContext.QuitarDelCarritoCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                                 CommandParameter="{Binding}">
                                             <TextBlock Text="-" Foreground="White" FontSize="18" FontWeight="Bold"/>
                                         </Button>
 
-                                        <Button Grid.Column="4" Width="36" Height="36" Background="#3ba151" 
+                                        <Button Grid.Column="4" Width="36" Height="36" Background="{StaticResource BrushGreen}" 
                                                 BorderBrush="Transparent" Margin="5,0" Cursor="Hand"
                                                 Command="{Binding DataContext.AgregarAlCarritoCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                                 CommandParameter="{Binding}">
@@ -145,6 +145,7 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
 
                                         <StackPanel Grid.Column="0" VerticalAlignment="Center">
@@ -152,12 +153,16 @@
                                             <TextBlock Text="{Binding CantidadCarrito, StringFormat='Cantidad: {0}'}" FontSize="11" Foreground="#666"/>
                                         </StackPanel>
 
-                                        <TextBlock Grid.Column="1" Text="{Binding SubtotalCarrito, StringFormat={}{0:C}}" 
-                                                   FontWeight="Bold" FontSize="14" Foreground="#1086a0" 
+                                        <TextBlock Grid.Column="1" Text="{Binding TotalNeto, StringFormat={}{0:C}}" 
+                                                   FontWeight="Bold" FontSize="14" Foreground="{StaticResource BrushPrimaryBlue}" 
                                                    VerticalAlignment="Center" Margin="10,0"/>
 
-                                        <Button Grid.Column="2" Content="✕" Background="Transparent" 
-                                                Foreground="#E74C3C" BorderThickness="0" FontSize="14" FontWeight="Bold"
+                                        <TextBlock Grid.Column="2" Text="{Binding PrecioVenta, StringFormat='({0:C} c/u)'}" 
+                                                   FontSize="11" Foreground="#888888" 
+                                                   VerticalAlignment="Center" Margin="5,0"/>
+
+                                        <Button Grid.Column="3" Content="✕" Background="Transparent" 
+                                                Foreground="{StaticResource BrushRed}" BorderThickness="0" FontSize="14" FontWeight="Bold"
                                                 Cursor="Hand" Margin="5,0"
                                                 Command="{Binding DataContext.EliminarItemCarritoCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"
                                                 CommandParameter="{Binding}"/>
@@ -168,31 +173,124 @@
                     </ListBox>
 
                     <Border Grid.Row="2" Background="#F0F0F0" CornerRadius="0,0,14,14" Padding="15,12">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="SELECCIONAR MÉTODO DE PAGO" FontSize="11" FontWeight="Bold" Foreground="{StaticResource BrushPrimaryBlue}" Margin="0,0,0,8"/>
 
-                            <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="0,0,8,0">
-                                <TextBlock Text="{Binding TotalProductosCarrito, StringFormat='{}{0} productos seleccionados'}" 
-                                           FontSize="12" Foreground="#666666"/>
-                                <TextBlock Text="{Binding Total, StringFormat='Total: {0:C}'}" 
-                                           FontSize="20" FontWeight="Bold" Foreground="Black"/>
-                            </StackPanel>
-
-                            <Button Grid.Column="1" Content="Confirmar" 
-                                    Background="#489fb5" BorderBrush="#489fb5"             
-                                    Foreground="White" Width="105" Height="40" 
-                                    FontWeight="Bold" FontSize="14" Cursor="Hand"
-                                    Command="{Binding CobrarVentaCommand}">
-                                <Button.Resources>
-                                    <Style TargetType="Border">
-                                        <Setter Property="CornerRadius" Value="18"/>
+                            <ListBox ItemsSource="{Binding MetodosPago}" 
+                                     SelectedItem="{Binding MetodoPagoSeleccionado}"
+                                     Background="Transparent" BorderThickness="0" Margin="0,0,0,12"
+                                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                     ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Orientation="Horizontal"/>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemContainerStyle>
+                                    <Style TargetType="ListBoxItem">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                        <Setter Property="Padding" Value="0"/>
+                                        <Setter Property="Margin" Value="0,0,8,0"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="ListBoxItem">
+                                                    <Border x:Name="Bd"
+                                                            Background="{TemplateBinding Background}"
+                                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                                            Padding="{TemplateBinding Padding}"
+                                                            SnapsToDevicePixels="true">
+                                                        <ContentPresenter />
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsSelected" Value="True">
+                                                            <Setter TargetName="Bd" Property="Background" Value="Transparent"/>
+                                                            <Setter TargetName="Bd" Property="BorderBrush" Value="Transparent"/>
+                                                        </Trigger>
+                                                        <Trigger Property="IsEnabled" Value="False">
+                                                            <Setter TargetName="Bd" Property="Opacity" Value="0.56"/>
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
                                     </Style>
-                                </Button.Resources>
-                            </Button>
-                        </Grid>
+                                </ListBox.ItemContainerStyle>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border x:Name="MetodoBorder" Background="White" BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="8" Padding="14,8" Cursor="Hand">
+                                            <TextBlock Text="{Binding Nombre}" FontSize="12" FontWeight="SemiBold" Foreground="#333333"/>
+                                        </Border>
+                                        <DataTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=ListBoxItem}}" Value="True">
+                                                <Setter TargetName="MetodoBorder" Property="Background" Value="{StaticResource BrushPrimaryBlue}"/>
+                                                <Setter TargetName="MetodoBorder" Property="BorderBrush" Value="{StaticResource BrushPrimaryBlue}"/>
+                                                <Setter TargetName="MetodoBorder" Property="TextBlock.Foreground" Value="White"/>
+                                            </DataTrigger>
+                                        </DataTemplate.Triggers>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+
+                            <Grid Margin="0,0,0,12">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding MetodoPagoSeleccionado.Nombre}" Value="Efectivo">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0" Margin="0,0,6,0">
+                                    <TextBlock Text="Cantidad Recibida ($):" FontSize="11" Foreground="{StaticResource BrushGreen}" Margin="0,0,0,4"/>
+                                    <Border Background="White" CornerRadius="6" BorderBrush="#CCCCCC" BorderThickness="1" Height="32" Padding="5,0">
+                                        <TextBox Text="{Binding EfectivoTexto, UpdateSourceTrigger=PropertyChanged}" 
+                                                 BorderThickness="0" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold" Foreground="#333333"/>
+                                    </Border>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1" Margin="6,0,0,0">
+                                    <TextBlock Text="Cambio a Entregar:" FontSize="11" Foreground="{StaticResource BrushRed}" Margin="0,0,0,4"/>
+                                    <TextBlock Text="{Binding Cambio, StringFormat={}{0:C}}" FontSize="16" FontWeight="Bold" Foreground="{StaticResource BrushRed}" VerticalAlignment="Center" Height="32"/>
+                                </StackPanel>
+                            </Grid>
+
+                            <Separator Background="#D3D3D3" Margin="0,0,0,12"/>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="0,0,8,0">
+                                    <TextBlock Text="{Binding TotalProductosCarrito, StringFormat='{}{0} productos seleccionados'}" 
+                                               FontSize="12" Foreground="#666666"/>
+                                    <TextBlock Text="{Binding Total, StringFormat='Total: {0:C}'}" 
+                                               FontSize="20" FontWeight="Bold" Foreground="Black"/>
+                                </StackPanel>
+
+                                <Button Grid.Column="1" Content="Confirmar" 
+                                        Background="{StaticResource BrushPrimaryBlue}" BorderBrush="{StaticResource BrushPrimaryBlue}"             
+                                        Foreground="White" Width="105" Height="40" 
+                                        FontWeight="Bold" FontSize="14" Cursor="Hand"
+                                        Command="{Binding CobrarVentaCommand}">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="18"/>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </Grid>
+                        </StackPanel>
                     </Border>
                 </Grid>
             </Border>

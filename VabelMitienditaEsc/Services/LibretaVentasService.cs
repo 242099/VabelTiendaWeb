@@ -254,5 +254,33 @@ namespace VabelMitienditaEsc.Services
                 }
             }
         }
+
+        // Se anexa este método a la clase existente para recuperar las formas de pago de la base de datos
+        // Este modelo exclusivamente devuelve una lista de objetos FormaPago, sin mapear a TransaccionHistorial, para usos específicos en la UI o lógica de negocio
+        public async Task<List<FormaPago>> GetFormasPagoAsync()
+        {
+            List<FormaPago> lista = new List<FormaPago>();
+            string query = "SELECT id_forma_pago, nombre FROM formas_pago ORDER BY id_forma_pago ASC";
+
+            using (MySqlConnection conn = new MySqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            lista.Add(new FormaPago
+                            {
+                                IdFormaPago = reader.GetInt32("id_forma_pago"),
+                                Nombre = reader.GetString("nombre")
+                            });
+                        }
+                    }
+                }
+            }
+            return lista;
+        }
     }
 }

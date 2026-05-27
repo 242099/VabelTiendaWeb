@@ -29,8 +29,9 @@ namespace VabelMitienditaEsc
             LibretaVentasService libretaventasService = new LibretaVentasService(connectionString);
             InventarioService inventarioService = new InventarioService(connectionString);
             VentasService ventasService = new VentasService(connectionString);
+            TiendaService tiendaService = new TiendaService(connectionString);
 
-            MainViewModel mainViewModel = new MainViewModel(navigationStore, authService, libretaventasService, inventarioService, ventasService);
+            MainViewModel mainViewModel = new MainViewModel(navigationStore, authService, libretaventasService, inventarioService, ventasService, tiendaService);
 
             // 4. Inicializar y conectar el servicio de Arduino
             // Recuerda modificar "COM3" por el puerto asignado a tu Arduino en el Administrador de dispositivos.
