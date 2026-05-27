@@ -122,5 +122,12 @@ namespace VabelMitienditaEsc.ViewModels
             TempEmail = string.Empty;
             _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
         }
+
+        [RelayCommand]
+        private void NavigateToProveedor()
+        {
+            // Le pasamos el servicio de proveedores que ya tenemos en MainViewModel
+            _navigationStore.CurrentViewModel = new ProveedorViewModel(_proveedorService);
+        }
     }
 }

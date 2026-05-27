@@ -69,8 +69,8 @@
                             <TextBlock Text="Libreta de ventas" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
-                    
-                    <Button Style="{StaticResource SidebarButtonStyle}">
+
+                    <Button Command="{Binding NavigateToProveedorCommand}" Style="{StaticResource SidebarButtonStyle}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource IconStyle}" Text="&#xf3a2;" Margin="0,0,15,0" />
                             <TextBlock Text="Proveedores" VerticalAlignment="Center"/>
