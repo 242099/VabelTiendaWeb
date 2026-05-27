@@ -14,9 +14,9 @@ namespace VabelMitienditaEsc.Core
         {
             if (value is bool esEdicion)
             {
-                return esEdicion ? "Editar Gasto" : "Nuevo Gasto";
+                return esEdicion ? "Editar Registro" : "Nuevo Registro";
             }
-            return "Nuevo Gasto";
+            return "Nuevo Registro";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

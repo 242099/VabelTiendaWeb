@@ -74,7 +74,7 @@ namespace VabelMitienditaEsc.Services
                                    numero = @numero, 
                                    ciudad = @ciudad,
                                    fecha_registro = @fecha_registro
-                               WHERE id_proveedor = @id_proveedor";
+                               WHERE id_proveedor = @id";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -89,7 +89,7 @@ namespace VabelMitienditaEsc.Services
                         cmd.Parameters.AddWithValue("@numero", (object)prov.numero ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@ciudad", (object)prov.ciudad ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@fecha_registro", prov.fechaRegistro.ToDateTime(TimeOnly.MinValue));
-                        cmd.Parameters.AddWithValue("@id_proveedor", prov.idProveedor);
+                        cmd.Parameters.AddWithValue("@id", prov.idProveedor);
 
                         int result = await cmd.ExecuteNonQueryAsync();
                         return result > 0;
@@ -100,6 +100,55 @@ namespace VabelMitienditaEsc.Services
             {
                 MessageBox.Show(e.Message);
                 return false;
+            }
+        }
+
+        public async Task<Proveedor> BuscarProveedorPorId(int id)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(_connectionString))
+                {
+                    await conn.OpenAsync();
+                    string query = @"SELECT id_proveedor, nombre_empresa, nombre, apaterno, amaterno, 
+                                    telefono, email, rfc, calle, numero, ciudad, fecha_registro 
+                                    FROM proveedor 
+                                    WHERE id_proveedor = @id";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            if (await reader.ReadAsync())
+                            {
+                                return new Proveedor
+                                {
+                                    idProveedor = reader.GetInt32("id_proveedor"),
+                                    nombreEmpresa = reader.GetString("nombre_empresa"),
+                                    nombre = reader.GetString("nombre"),
+                                    aPaterno = reader.GetString("apaterno"),
+                                    aMaterno = reader.GetString("amaterno"),
+                                    telefono = reader.GetString("telefono"),
+                                    email = reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString("email"),
+                                    rfc = reader.GetString("rfc"),
+                                    calle = reader.IsDBNull(reader.GetOrdinal("calle")) ? null : reader.GetString("calle"),
+                                    numero = reader.IsDBNull(reader.GetOrdinal("numero")) ? null : reader.GetString("numero"),
+                                    ciudad = reader.IsDBNull(reader.GetOrdinal("ciudad")) ? null : reader.GetString("ciudad"),
+                                    fechaRegistro = DateOnly.FromDateTime(reader.GetDateTime("fecha_registro"))
+                                };
+                            }
+                        }
+                    }
+                }
+
+                return null;
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
             }
         }
 
@@ -140,7 +189,7 @@ namespace VabelMitienditaEsc.Services
                                CONCAT_WS(' ', nombre, apaterno, amaterno) AS nombre_completo, 
                                telefono, email
                                FROM proveedor 
-                               ORDER BY nombre_empresa DESC";
+                               ORDER BY nombre_empresa ASC";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -166,31 +215,54 @@ namespace VabelMitienditaEsc.Services
             catch (MySqlException e)
             {
                 MessageBox.Show(e.Message);
-                return null;
+                return listaProveedores;
             }
         }
 
-        public async Task<bool> BuscarPorEmpresa(string empresa)
+        public async Task<List<ProveedorVistaLista>> BuscarProveedoresPorNombreOEmpresa(string criterioBusqueda)
         {
+            List<ProveedorVistaLista> resultados = new List<ProveedorVistaLista>();
+
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(_connectionString))
                 {
                     await conn.OpenAsync();
-                    string query = @"SELECT * FROM proveedor WHERE nombre_empresa = @empresa";
+
+                    string query = @"SELECT id_proveedor, nombre_empresa, 
+                               CONCAT_WS(' ', nombre, apaterno, amaterno) AS nombre_completo, 
+                               telefono, email
+                             FROM proveedor 
+                             WHERE nombre_empresa LIKE @criterio 
+                                OR CONCAT_WS(' ', nombre, apaterno, amaterno) LIKE @criterio";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@empresa", empresa);
-                        int result = await cmd.ExecuteNonQueryAsync();
-                        return result > 0;
+                        cmd.Parameters.AddWithValue("@criterio", "%" + criterioBusqueda + "%");
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                resultados.Add(new ProveedorVistaLista
+                                {
+                                    idProveedor = reader.GetInt32("id_proveedor"),
+                                    nombreEmpresa = reader.GetString("nombre_empresa"),
+                                    nombreCompleto = reader.GetString("nombre_completo"),
+                                    telefono = reader.GetString("telefono"),
+                                    email = reader.IsDBNull(reader.GetOrdinal("email")) ? "Sin email registrado" : reader.GetString("email")
+                                });
+                            }
+                        }
                     }
                 }
+
+                return resultados;
             }
             catch (MySqlException e)
             {
-                MessageBox.Show(e.Message);
-                return false;
+                MessageBox.Show($"Error al buscar proveedores: {e.Message}");
+                return resultados;
             }
         }
     }
