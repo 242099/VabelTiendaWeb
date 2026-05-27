@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="VabelMitienditaEsc.Views.LoginPinView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VabelMitienditaEsc.Views"
+             mc:Ignorable="d"
+             Background="{StaticResource BrushBackgroundWhite}"
+             d:DesignHeight="720" d:DesignWidth="1080">
+             
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Misma distribución de altura que la vista de correo -->
+            <RowDefinition Height="280"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- CABECERA (Fondo blanco por defecto del UserControl) -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="/Res/Images/vabel_dark.png" Height="120" Width="Auto" Margin="0,0,0,15" />
+            
+            <TextBlock Text="Vabel" 
+                       FontSize="36" 
+                       FontWeight="Bold" 
+                       Foreground="{StaticResource BrushPrimaryBlue}" 
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- FORMULARIO (Fondo azul con bordes redondeados) -->
+        <Border Grid.Row="1" Background="{StaticResource BrushPrimaryBlue}" CornerRadius="20,20,0,0">
+            <Grid>
+                <StackPanel HorizontalAlignment="Center" Width="450" Margin="0,60,0,0">
+                    
+                    <!-- Texto cambiado a Blanco para que resalte en el fondo azul -->
+                    <TextBlock Text="Ingresa tu PIN" 
+                               Foreground="White" 
+                               FontSize="26" 
+                               FontWeight="SemiBold" 
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,25" />
+                               
+                    <!-- PasswordBox centrado -->
+                    <PasswordBox x:Name="PinBox" 
+                                 Height="60" 
+                                 Padding="15,0,15,0" 
+                                 FontSize="30" 
+                                 Margin="0,0,0,30" 
+                                 MaxLength="4" 
+                                 HorizontalContentAlignment="Center"
+                                 VerticalContentAlignment="Center"/>
+
+                    <!-- Mensaje de error en tono rojizo claro para el fondo oscuro -->
+                    <TextBlock Text="{Binding ErrorMessage}" 
+                               Foreground="#FFCDCD" 
+                               FontSize="16"
+                               Margin="0,0,0,15" 
+                               Visibility="{Binding HasError, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               TextAlignment="Center"/>
+
+                    <Button Command="{Binding LoginCommand}" 
+                            CommandParameter="{Binding ElementName=PinBox}" 
+                            Content="Entrar" 
+                            Background="{StaticResource BrushGreen}" 
+                            Foreground="White" 
+                            Height="60" 
+                            FontSize="20" 
+                            FontWeight="Bold" 
+                            BorderThickness="0" 
+                            Margin="0,0,0,15"
+                            Cursor="Hand"/>
+
+                    <!-- Texto de regresar cambiado a Blanco para que sea visible -->
+                    <Button Command="{Binding BackCommand}" 
+                            Content="Regresar" 
+                            FontSize="20"
+                            Background="{StaticResource BrushLightBlue}" 
+                            Foreground="{StaticResource BrushPrimaryBlue}" 
+                            Height="50" 
+                            BorderThickness="0" 
+                            Cursor="Hand"/>
+                    <TextBlock Text="Vabel v1.0.0" 
+                            Foreground="#FFFFFF" 
+                            FontSize="14" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Bottom" 
+                            Margin="0,20,0,0"/>        
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Github Repositories\Test\VabelTiendaWeb\VabelMitienditaEsc\obj\Debug\net9.0-windows\
+C:\Users\abrah\source\repos\EscuelaGit\VabelTiendaWeb\VabelMitienditaEsc\obj\Debug\net9.0-windows\
 VabelMitienditaEsc
 none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-D:\Github Repositories\Test\VabelTiendaWeb\VabelMitienditaEsc\App.xaml
-11407045341
-
-6-2128688653
-200754226803
-MainWindow.xaml;
+C:\Users\abrah\source\repos\EscuelaGit\VabelTiendaWeb\VabelMitienditaEsc\App.xaml
+8-1543361530
+1-832987202
+35-1962459582
+219-1907139294
+MainWindow.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Views\LibretaVentasView.xaml;Views\LobbyView.xaml;Views\LoginEmailView.xaml;Views\LoginPinView.xaml;Views\NuevaVentaView.xaml;
 
 False
 

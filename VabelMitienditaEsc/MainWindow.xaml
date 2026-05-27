@@ -3,10 +3,92 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VabelMitienditaEsc"
+        xmlns:core="clr-namespace:VabelMitienditaEsc.Core" 
+        xmlns:viewmodels="clr-namespace:VabelMitienditaEsc.ViewModels" 
+        xmlns:views="clr-namespace:VabelMitienditaEsc.Views"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BrushBackgroundWhite}"
+        Icon="/Res/Images/vabel_icon.ico"
+        Title="Vabel" Height="720" Width="1080">
+    <Window.Resources>
+        <core:SidebarWidthConverter x:Key="SidebarWidthConverter" />
+    </Window.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{Binding ShowSidebar, Converter={StaticResource SidebarWidthConverter}}" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
+        <Border Grid.Column="0" Background="{StaticResource BrushPrimaryBlue}" x:Name="SidebarContainer" ClipToBounds="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="/Res/Images/vabel_white.png" Height="50" Width="Auto" Margin="20,40,20,40" HorizontalAlignment="Center"/>
+
+                <StackPanel Grid.Row="1" Margin="10,0,10,0">
+                    <Button Command="{Binding NavigateToLobbyCommand}" Style="{StaticResource SidebarButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text="&#xe88a;" Margin="0,0,15,0" />
+                            <TextBlock Text="Inicio" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Command="{Binding NavigateToNuevaVentaCommand}" Style="{StaticResource SidebarButtonStyle}" Background="{StaticResource BrushGreen}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text="&#xe227;" Margin="0,0,15,0" />
+                            <TextBlock Text="Nueva venta" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button Style="{StaticResource SidebarButtonStyle}" Background="{StaticResource BrushRed}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text="&#xef63;" Margin="0,0,15,0" />
+                            <TextBlock Text="Nuevo gasto" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource SidebarButtonStyle}" Background="{StaticResource BrushYellow}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text="&#xf5a4;" Margin="0,0,15,0" />
+                            <TextBlock Text="Inventario" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Command="{Binding NavigateToLibretaVentasCommand}" Style="{StaticResource SidebarButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text="&#xe865;" Margin="0,0,15,0" />
+                            <TextBlock Text="Libreta de ventas" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button Style="{StaticResource SidebarButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text="&#xf3a2;" Margin="0,0,15,0" />
+                            <TextBlock Text="Proveedores" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Margin="10,0,10,30">
+                    <Separator Background="#33FFFFFF" Margin="0,0,0,15"/>
+                    <Button Command="{Binding LogoutCommand}" Style="{StaticResource SidebarButtonStyle}" Foreground="{StaticResource BrushRed}" Background="{StaticResource BrushLightBlue}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text="&#xe9ba;" Foreground="{StaticResource BrushRed}" Margin="0,0,15,0" />
+                            <TextBlock Text="Cerrar Sesión" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Column="1" Background="{StaticResource BrushBackgroundWhite}">
+            <ContentControl Content="{Binding CurrentViewModel}" />
+        </Grid>
     </Grid>
 </Window>

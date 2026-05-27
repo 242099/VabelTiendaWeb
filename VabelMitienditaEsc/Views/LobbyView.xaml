@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="VabelMitienditaEsc.Views.LobbyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="720" d:DesignWidth="850"
+             Background="#188495">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Balance General" FontSize="26" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding FechaActual}" FontSize="16" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="White" CornerRadius="12" Margin="0,0,10,0" Padding="15">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Total de Ingresos (Hoy)" FontSize="14" Foreground="#666" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding TotalIngresos, StringFormat=c}" FontSize="32" FontWeight="Bold" Foreground="#222" HorizontalAlignment="Center" Margin="0,10"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" Background="White" CornerRadius="12" Margin="5,0" Padding="15">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Ventas Totales" FontSize="14" Foreground="#666"/>
+                    <TextBlock Text="{Binding VentasTotales}" FontSize="28" FontWeight="Bold" Foreground="#222" Margin="0,5,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="2" Background="White" CornerRadius="12" Margin="10,0,0,0" Padding="15">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Ticket Promedio" FontSize="14" Foreground="#666"/>
+                    <TextBlock Text="{Binding TicketPromedio, StringFormat=c}" FontSize="28" FontWeight="Bold" Foreground="#222" Margin="0,5,0,0"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="0,0,20,0">
+                <TextBlock Text="Métodos de Pago" FontSize="18" Foreground="White" FontWeight="SemiBold" Margin="0,0,0,15"/>
+
+                <Border Background="White" CornerRadius="10" Padding="15" Margin="0,0,0,10">
+                    <Grid>
+                        <TextBlock Text="💵 Efectivo" FontSize="15" Foreground="#555" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding TotalEfectivo, StringFormat=c}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right"/>
+                    </Grid>
+                </Border>
+                <Border Background="White" CornerRadius="10" Padding="15" Margin="0,0,0,10">
+                    <Grid>
+                        <TextBlock Text="💳 Tarjeta" FontSize="15" Foreground="#555" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding TotalTarjeta, StringFormat=c}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right"/>
+                    </Grid>
+                </Border>
+                <Border Background="White" CornerRadius="10" Padding="15">
+                    <Grid>
+                        <TextBlock Text="📱 Transf." FontSize="15" Foreground="#555" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding TotalTransferencia, StringFormat=c}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="Últimas Ventas" FontSize="18" Foreground="White" FontWeight="SemiBold" Margin="0,0,0,15"/>
+
+                <Border Grid.Row="1" Background="White" CornerRadius="10" Padding="10">
+                    <ListView ItemsSource="{Binding UltimasVentas}" BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="100"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Hora}" Foreground="#888" VerticalAlignment="Center" FontSize="14"/>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                        <TextBlock Text="{Binding FolioTicket}" FontWeight="Bold" Foreground="#333" FontSize="15"/>
+                                        <TextBlock Text="{Binding ResumenArticulos}" Foreground="#666" FontSize="13"/>
+                                    </StackPanel>
+                                    <TextBlock Grid.Column="2" Text="{Binding TotalVenta, StringFormat=c}" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
