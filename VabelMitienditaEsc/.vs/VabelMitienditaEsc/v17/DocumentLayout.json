@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\",
   "Documents": [
     {
@@ -9,6 +10,53 @@
     {
       "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabelmitienditaesc\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\views\\proveedorview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\proveedorview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\viewmodels\\gastoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\gastoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\viewmodels\\proveedorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\proveedorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\views\\gastoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\gastoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\services\\formaspagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\formaspagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|d:\\github repositories\\test\\vabeltiendaweb\\vabeltiendaweb\\vabelmitienditaesc\\views\\gastoview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\gastoview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -18,14 +66,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 1,
           "Children": [
             {
+=======
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml.cs*",
+              "RelativeToolTip": "App.xaml.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwCQAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T19:33:10.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T19:12:35.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAUwHYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T19:08:08.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProveedorView.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\ProveedorView.xaml",
+              "RelativeDocumentMoniker": "Views\\ProveedorView.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\ProveedorView.xaml",
+              "RelativeToolTip": "Views\\ProveedorView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T19:04:56.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GastoViewModel.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\GastoViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\GastoViewModel.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\GastoViewModel.cs",
+              "RelativeToolTip": "ViewModels\\GastoViewModel.cs",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAmwGkBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T18:39:38.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T18:06:09.112Z",
+              "EditorCaption": ""
+            },
+            {
+>>>>>>> Stashed changes
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml",
@@ -34,10 +164,22 @@
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-05-12T02:13:06.887Z",
+=======
+              "DocumentIndex": 6,
+              "Title": "ProveedorViewModel.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\ProveedorViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ProveedorViewModel.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\ViewModels\\ProveedorViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ProveedorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T19:11:09.723Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelMitienditaEsc\\MainWindow.xaml.cs",
@@ -47,6 +189,56 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T02:12:54.58Z"
+=======
+              "DocumentIndex": 7,
+              "Title": "FormaPago.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Models\\FormaPago.cs",
+              "RelativeDocumentMoniker": "Models\\FormaPago.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Models\\FormaPago.cs",
+              "RelativeToolTip": "Models\\FormaPago.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T18:38:05.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GastoView.xaml.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\GastoView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\GastoView.xaml.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\GastoView.xaml.cs",
+              "RelativeToolTip": "Views\\GastoView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T18:50:14.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormasPagoService.cs",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\FormasPagoService.cs",
+              "RelativeDocumentMoniker": "Services\\FormasPagoService.cs",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Services\\FormasPagoService.cs",
+              "RelativeToolTip": "Services\\FormasPagoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T18:35:36.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GastoView.xaml",
+              "DocumentMoniker": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\GastoView.xaml",
+              "RelativeDocumentMoniker": "Views\\GastoView.xaml",
+              "ToolTip": "D:\\Github Repositories\\Test\\VabelTiendaWeb\\VabelTiendaWeb\\VabelMitienditaEsc\\Views\\GastoView.xaml",
+              "RelativeToolTip": "Views\\GastoView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T18:33:27.344Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             }
           ]
         }

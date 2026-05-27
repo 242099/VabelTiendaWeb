@@ -4,6 +4,40 @@
              xmlns:local="clr-namespace:VabelMitienditaEsc"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+<<<<<<< Updated upstream
          
+=======
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Colors.xaml" />
+                <ResourceDictionary Source="Styles/Fonts.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewmodels:LoginEmailViewModel}">
+                <views:LoginEmailView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:LoginPinViewModel}">
+                <views:LoginPinView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:LobbyViewModel}">
+                <views:LobbyView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:LibretaVentasViewModel}">
+                <views:LibretaVentasView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:NuevaVentaViewModel}">
+                <views:NuevaVentaView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:ProveedorViewModel}">
+                <views:ProveedorView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:GastoViewModel}">
+                <views:GastoView />
+            </DataTemplate>
+
+
+        </ResourceDictionary>
+>>>>>>> Stashed changes
     </Application.Resources>
 </Application>
