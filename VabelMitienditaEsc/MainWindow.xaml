@@ -45,13 +45,16 @@
                             <TextBlock Text="Nueva venta" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
-                    
-                    <Button Style="{StaticResource SidebarButtonStyle}" Background="{StaticResource BrushRed}">
+
+
+                    <Button Command="{Binding NavigateToGastoCommand}" Style="{StaticResource SidebarButtonStyle}" Background="{StaticResource BrushRed}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource IconStyle}" Text="&#xef63;" Margin="0,0,15,0" />
                             <TextBlock Text="Nuevo gasto" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
+
+
 
                     <Button Style="{StaticResource SidebarButtonStyle}" Background="{StaticResource BrushYellow}">
                         <StackPanel Orientation="Horizontal">

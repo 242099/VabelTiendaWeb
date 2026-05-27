@@ -3,7 +3,6 @@ using CommunityToolkit.Mvvm.Input;
 using VabelMitienditaEsc.Core;
 using VabelMitienditaEsc.Models;
 using VabelMitienditaEsc.Services;
-using VabelMitienditaEsc.Views;
 
 namespace VabelMitienditaEsc.ViewModels
 {
@@ -15,6 +14,12 @@ namespace VabelMitienditaEsc.ViewModels
         private readonly InventarioService _inventarioService;
         private readonly VentasService _ventasService;
         private readonly TiendaService _tiendaService;
+
+        //  SERVICIOS NECESARIOS PARA GASTOS
+        private readonly GastosOperativosService _gastosOperativosService;
+        private readonly ProveedorService _proveedorService;
+        private readonly FormasPagoService _formasPagoService;
+        private readonly CatalogoCuentasService _catalogoCuentasService;
 
         [ObservableProperty]
         private ViewModelBase _currentViewModel;
@@ -32,12 +37,16 @@ namespace VabelMitienditaEsc.ViewModels
         public ArduinoService DispositivoArduino { get; set; }
 
         public MainViewModel(
-            NavigationStore navigationStore, 
-            DatabaseAuthenticationService authService, 
+            NavigationStore navigationStore,
+            DatabaseAuthenticationService authService,
             LibretaVentasService libretaventasService,
             InventarioService inventarioService,
             VentasService ventasService,
-            TiendaService tiendaService)
+            TiendaService tiendaService,
+            GastosOperativosService gastosOperativosService,
+            ProveedorService proveedorService,
+            FormasPagoService formasPagoService,
+            CatalogoCuentasService catalogoCuentasService)
         {
             _navigationStore = navigationStore;
             _authService = authService;
@@ -46,18 +55,24 @@ namespace VabelMitienditaEsc.ViewModels
             _ventasService = ventasService;
             _tiendaService = tiendaService;
 
+            // 3. INICIALIZA LOS NUEVOS SERVICIOS
+            _gastosOperativosService = gastosOperativosService;
+            _proveedorService = proveedorService;
+            _formasPagoService = formasPagoService;
+            _catalogoCuentasService = catalogoCuentasService;
+
             _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
 
             _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
         }
 
-        //Este método prácticamente se encarga de actualizar la vista actual y decidir si mostrar o no la barra lateral dependiendo de qué vista se esté mostrando.
         private void OnCurrentViewModelChanged()
         {
             CurrentViewModel = _navigationStore.CurrentViewModel;
             ShowSidebar = CurrentViewModel is not LoginEmailViewModel &&
                           CurrentViewModel is not LoginPinViewModel;
         }
+
 
         [RelayCommand]
         private void NavigateToLobby()
@@ -69,10 +84,10 @@ namespace VabelMitienditaEsc.ViewModels
         private void NavigateToNuevaVenta()
         {
             _navigationStore.CurrentViewModel = new NuevaVentaViewModel(
-                _navigationStore, 
-                this, 
-                _inventarioService, 
-                _ventasService, 
+                _navigationStore,
+                this,
+                _inventarioService,
+                _ventasService,
                 _libretaventasService,
                 _tiendaService);
         }
@@ -84,6 +99,21 @@ namespace VabelMitienditaEsc.ViewModels
             // pueda leer los datos de '_currentUser' y su 'IdRol' real de la base de datos
             _navigationStore.CurrentViewModel = new LibretaVentasViewModel(_navigationStore, this, _libretaventasService);
         }
+
+
+        //  COMANDO PARA NAVEGAR A NUEVO GASTO
+        [RelayCommand]
+        private void NavigateToGasto()
+        {
+            _navigationStore.CurrentViewModel = new GastoViewModel(
+                _navigationStore,
+                this,
+                _gastosOperativosService,
+                _proveedorService,
+                _formasPagoService,
+                _catalogoCuentasService);
+        }
+
 
         [RelayCommand]
         private void Logout()

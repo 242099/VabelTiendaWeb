@@ -31,7 +31,24 @@ namespace VabelMitienditaEsc
             VentasService ventasService = new VentasService(connectionString);
             TiendaService tiendaService = new TiendaService(connectionString);
 
-            MainViewModel mainViewModel = new MainViewModel(navigationStore, authService, libretaventasService, inventarioService, ventasService, tiendaService);
+            // --- NUEVOS SERVICIOS PARA LA VISTA DE GASTOS ---
+            GastosOperativosService gastosService = new GastosOperativosService(connectionString);
+            ProveedorService proveedorService = new ProveedorService(connectionString);
+            FormasPagoService formasPagoService = new FormasPagoService(connectionString);
+            CatalogoCuentasService catalogoCuentasService = new CatalogoCuentasService(connectionString);
+
+            // Pasamos todos los servicios al constructor del MainViewModel
+            MainViewModel mainViewModel = new MainViewModel(
+                navigationStore,
+                authService,
+                libretaventasService,
+                inventarioService,
+                ventasService,
+                tiendaService,
+                gastosService,
+                proveedorService,
+                formasPagoService,
+                catalogoCuentasService);
 
             // 4. Inicializar y conectar el servicio de Arduino
             // Recuerda modificar "COM3" por el puerto asignado a tu Arduino en el Administrador de dispositivos.

@@ -4,12 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:VabelMitienditaEsc.Views"
+             xmlns:core="clr-namespace:VabelMitienditaEsc.Core" 
              mc:Ignorable="d"
              Background="{StaticResource BrushBackgroundWhite}"
              d:DesignHeight="720"
              d:DesignWidth="1080">
 
     <UserControl.Resources>
+
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <core:BoolToTextConverter x:Key="BoolToTextConverter" />
+        <core:CountToVisibilityConverter x:Key="CountToVisibilityConverter" />
 
         <Style x:Key="RoundedButtonStyle" TargetType="Button">
             <Setter Property="Foreground" Value="White"/>

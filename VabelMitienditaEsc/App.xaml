@@ -25,6 +25,9 @@
             <DataTemplate DataType="{x:Type viewmodels:NuevaVentaViewModel}">
                 <views:NuevaVentaView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:GastoViewModel}">
+                <views:GastoView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
