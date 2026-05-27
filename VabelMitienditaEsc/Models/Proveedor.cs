@@ -14,15 +14,15 @@ namespace VabelMitienditaEsc.Models
         public string aPaterno { get; set; }
         public string aMaterno { get; set; }
         public string telefono { get; set; }
-        public string email { get; set; }
+        public string? email { get; set; }
         public string rfc { get; set; }
-        public string calle { get; set; }
-        public string numero { get; set; }
-        public string ciudad { get; set; }
+        public string? calle { get; set; }
+        public string? numero { get; set; }
+        public string? ciudad { get; set; }
         public DateOnly fechaRegistro { get; set; }
         public override string ToString()
         {
-            return $"Proveedor [idProveedor={idProveedor}, nombreEmpresa={nombreEmpresa}, nombre={nombre + aPaterno + aMaterno}, telefono={telefono}, email={email}, rfc={rfc}, calle={calle}, numero={numero}, ciudad={ciudad}, fechaRegistro={fechaRegistro}]";
+            return $"Proveedor [idProveedor={idProveedor}, nombreEmpresa={nombreEmpresa}, nombre={nombre} {aPaterno} {aMaterno}, telefono={telefono}, email={email}, rfc={rfc}, calle={calle}, numero={numero}, ciudad={ciudad}, fechaRegistro={fechaRegistro}]";
         }
     }
 }

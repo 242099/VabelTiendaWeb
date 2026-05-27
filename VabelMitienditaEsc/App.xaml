@@ -27,6 +27,9 @@
             <DataTemplate DataType="{x:Type viewmodels:GastoViewModel}">
                 <views:GastoView />
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:ProveedorViewModel}">
+                <views:ProveedorView />
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

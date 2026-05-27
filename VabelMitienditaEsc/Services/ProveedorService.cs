@@ -37,12 +37,12 @@ namespace VabelMitienditaEsc.Services
                         cmd.Parameters.AddWithValue("@apaterno", prov.aPaterno);
                         cmd.Parameters.AddWithValue("@amaterno", prov.aMaterno);
                         cmd.Parameters.AddWithValue("@telefono", prov.telefono);
-                        cmd.Parameters.AddWithValue("@email", prov.email);
+                        cmd.Parameters.AddWithValue("@email", (object)prov.email ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@rfc", prov.rfc);
-                        cmd.Parameters.AddWithValue("@calle", prov.calle);
-                        cmd.Parameters.AddWithValue("@numero", prov.numero);
-                        cmd.Parameters.AddWithValue("@ciudad", prov.ciudad);
-                        cmd.Parameters.AddWithValue("@fecha_registro", prov.fechaRegistro);
+                        cmd.Parameters.AddWithValue("@calle", (object)prov.calle ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@numero", (object)prov.numero ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@ciudad", (object)prov.ciudad ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@fecha_registro", prov.fechaRegistro.ToDateTime(TimeOnly.MinValue));
                         int result = await cmd.ExecuteNonQueryAsync();
                         return result > 0;
                     }
@@ -83,12 +83,12 @@ namespace VabelMitienditaEsc.Services
                         cmd.Parameters.AddWithValue("@apaterno", prov.aPaterno);
                         cmd.Parameters.AddWithValue("@amaterno", prov.aMaterno);
                         cmd.Parameters.AddWithValue("@telefono", prov.telefono);
-                        cmd.Parameters.AddWithValue("@email", prov.email);
+                        cmd.Parameters.AddWithValue("@email", (object)prov.email ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@rfc", prov.rfc);
-                        cmd.Parameters.AddWithValue("@calle", prov.calle);
-                        cmd.Parameters.AddWithValue("@numero", prov.numero);
-                        cmd.Parameters.AddWithValue("@ciudad", prov.ciudad);
-                        cmd.Parameters.AddWithValue("@fecha_registro", prov.fechaRegistro);
+                        cmd.Parameters.AddWithValue("@calle", (object)prov.calle ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@numero", (object)prov.numero ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@ciudad", (object)prov.ciudad ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@fecha_registro", prov.fechaRegistro.ToDateTime(TimeOnly.MinValue));
                         cmd.Parameters.AddWithValue("@id_proveedor", prov.idProveedor);
 
                         int result = await cmd.ExecuteNonQueryAsync();
@@ -154,7 +154,7 @@ namespace VabelMitienditaEsc.Services
                                     nombreEmpresa = reader.GetString("nombre_empresa"),
                                     nombreCompleto = reader.GetString("nombre_completo"),
                                     telefono = reader.GetString("telefono"),
-                                    email = reader.GetString("email")
+                                    email = reader.IsDBNull(reader.GetOrdinal("email")) ? "Sin email registrado" : reader.GetString("email")
                                 });
                             }
                         }

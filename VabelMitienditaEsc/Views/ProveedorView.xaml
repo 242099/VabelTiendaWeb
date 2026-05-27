@@ -1,0 +1,191 @@
+﻿<UserControl x:Class="VabelMitienditaEsc.Views.ProveedorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VabelMitienditaEsc.Views"
+             mc:Ignorable="d" 
+             Background="{StaticResource BrushBackgroundWhite}"
+             d:DesignHeight="720"
+             d:DesignWidth="1080">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- ENCABEZADO -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,20,20,0" VerticalAlignment="Top">
+            <TextBlock Text="Proveedores" FontSize="28" FontWeight="Bold" Foreground="#333333"/>
+            <Button Content="+ Nuevo Proveedor" 
+                    Command="{Binding AbrirFormularioNuevoProveedorCommand}"
+                    Background="#007ACC" 
+                    Foreground="White" 
+                    Padding="15,10" 
+                    Margin="20,0,0,0"
+                    FontSize="14"
+                    Cursor="Hand"/>
+        </StackPanel>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="350" x:Name="PanelFormulario"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- COLUMNA IZQUIERDA: LISTADO Y FILTROS -->
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+
+                <!-- FILTROS POR EMPRESA A LA QUE PERTENECE EL PROVEEDOR -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <TextBlock Text="Empresa:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <ComboBox SelectedValuePath="id_proveedor" 
+                              SelectedValue="{Binding EmpresaProveedorSeleccionada}"
+                              Margin="0,8,12,8">
+                        <!-- Los items se vincularan a una colección creada a partir del Modelo Proveedor, usando el servicio ProveedorService-->
+                        <ComboBoxItem>Seleccionar empresa</ComboBoxItem>
+                    </ComboBox>
+
+                    <Button Content="Buscar" 
+                            Command="{Binding BuscarNombreEmpresaCommand}"
+                            Background="#17A2B8" 
+                            Foreground="White" 
+                            Padding="15,8"/>
+                </StackPanel>
+                
+                <Border Background="#F0F0F0" BorderBrush="#CCCCCC" BorderThickness="1" Padding="20" Margin="0,0,0,15"/>
+
+                <!-- TABLA DE PROVEEDORES (Solo visible si MostrarListadoProveedores = true) -->
+                <DataGrid ItemsSource="{Binding ListaProveedores}" 
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          Visibility="{Binding MostrarListadoProveedores, Converter={StaticResource BooleanToVisibilityConverter}}"
+                          Margin="0,0,20,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding idProveedor}" Width="70"/>
+                        <DataGridTextColumn Header="Empresa" Binding="{Binding nombreEmpresa}" Width="140"/>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding nombreCompleto}" Width="160"/>
+                        <DataGridTextColumn Header="Telefono" Binding="{Binding telefono}" Width="120"/>
+                        <DataGridTextColumn Header="Correo electrónico" Binding="{Binding email}" Width="120"/>
+
+                        <!-- Columna de Acciones -->
+                        <DataGridTemplateColumn Header="Acciones" Width="100">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Margin="5">
+                                        <Button Content="Editar" 
+                                                Command="{Binding DataContext.EditarProveedorCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                                CommandParameter="{Binding}"
+                                                Background="#FFC107" 
+                                                Foreground="White" 
+                                                Padding="8,5"
+                                                Margin="0,0,5,0"
+                                                FontSize="11"/>
+                                        <Button Content="Eliminar" 
+                                                Command="{Binding DataContext.EliminarProveedorCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                                CommandParameter="{Binding}"
+                                                Background="#DC3545" 
+                                                Foreground="White" 
+                                                Padding="8,5"
+                                                FontSize="11"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!-- MENSAJE VACÍO -->
+                <TextBlock Text="No hay provedores registrados"
+                           Foreground="#999999"
+                           FontSize="14"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Visibility="{Binding ListaProveedores.Count, Converter={StaticResource CountToVisibilityConverter}}"
+                           Margin="0,50,0,0"/>
+            </StackPanel>
+
+            <!-- COLUMNA DERECHA: FORMULARIO -->
+            <StackPanel Grid.Column="1" 
+                        Orientation="Vertical" 
+                        Margin="20,0,0,0"
+                        Visibility="{Binding MostrarListadoProveedores, Converter={StaticResource BooleanToVisibilityConverter}}">
+
+                <!-- TÍTULO FORMULARIO -->
+                <TextBlock Text="{Binding EsEdicion, Converter={StaticResource BoolToTextConverter}}"
+                           FontSize="16" 
+                           FontWeight="Bold" 
+                           Margin="0,0,0,15"/>
+
+                <!-- CAMPOS DEL FORMULARIO -->
+                <StackPanel Orientation="Vertical">
+
+                    <!-- Nombre de la empresa -->
+                    <TextBlock Text="Nombre de la empresa:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding NombreEmpresa}" TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                    <!-- Nombre del provedor -->
+                    <TextBlock Text="Nombre:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding NombreProveedor}" TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                    <!-- Apellido Paterno del proveedor -->
+                    <TextBlock Text="Apellido Paterno:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding ApellidoPaternoProveedor}" Margin="0,0,0,15"/>
+
+                    <!-- Apellido Materno del proveedor -->
+                    <TextBlock Text="Apellido Materno:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding ApellidoMaternoProveedor}" Margin="0,0,0,15"/>
+
+                    <!-- Telefono -->
+                    <TextBlock Text="Telefono:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding TelefonoProveedor}" TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                    <!-- Correo Electrónico -->
+                    <TextBlock Text="Correo Electrónico:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding EmailProveedor}" TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                    <!-- RFC -->
+                    <TextBlock Text="RFC:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding RfcEmpresa}" TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                    <!-- Calle -->
+                    <TextBlock Text="DOMICILIO EMPRESA:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBlock Text="Calle:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding CalleEmpresa}" TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                    <!-- Número -->
+                    <TextBlock Text="Número:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding NumeroEmpresa}" TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                    <!-- Ciudad -->
+                    <TextBlock Text="Ciudad:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox Text="{Binding CiudadEmpresa}" TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+                    <!-- Fecha de registro -->
+                    <TextBlock Text="Fecha de registro:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <DatePicker SelectedDate="{Binding FechaRegistroProveedor}" Margin="0,0,0,15"/>
+
+                    <!-- BOTONES -->
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <Button Content="Guardar" 
+                                Command="{Binding GuardarProveedorCommand}"
+                                Background="#28A745" 
+                                Foreground="White" 
+                                Padding="15,10"
+                                Margin="0,0,10,0"
+                                FontWeight="Bold"/>
+                        <Button Content="Cancelar" 
+                                Command="{Binding CancelarProveedorCommand}"
+                                Background="#6C757D" 
+                                Foreground="White" 
+                                Padding="15,10"
+                                FontWeight="Bold"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</UserControl>

@@ -12,6 +12,6 @@ namespace VabelMitienditaEsc.Models
         public string nombreEmpresa { get; set; }
         public string nombreCompleto { get; set; }
         public string telefono { get; set; }
-        public string email { get; set; }
+        public string? email { get; set; }
     }
 }

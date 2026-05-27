@@ -76,6 +76,12 @@ namespace VabelMitienditaEsc.ViewModels
         }
 
         [RelayCommand]
+        private void NavigateToProveedor()
+        {
+            _navigationStore.CurrentViewModel = new ProveedorViewModel(_navigationStore, this, _proveedorService);
+        }
+
+        [RelayCommand]
         private void Logout()
         {
             CurrentUser = null;
