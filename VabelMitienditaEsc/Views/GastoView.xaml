@@ -343,7 +343,7 @@
 
                                 <DataGridTextColumn Header="Usuario"
                                                     Binding="{Binding nomUsuario}"
-                                                    Width="120"/>
+                                                    Width="150"/>
 
                                 <DataGridTextColumn Header="Proveedor"
                                                     Binding="{Binding nombreEmpresaProveedor}"

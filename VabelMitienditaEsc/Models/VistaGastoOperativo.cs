@@ -13,7 +13,7 @@ namespace VabelMitienditaEsc.Models
         public string descripcion { get; set; }
         public decimal monto { get; set; }
         public string nomUsuario { get; set; }
-        public string nombreEmpresaProveedor { get; set; }
+        public string? nombreEmpresaProveedor { get; set; }
         public string formaPago { get; set; }
     }
 }

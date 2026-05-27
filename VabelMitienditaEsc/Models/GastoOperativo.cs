@@ -13,7 +13,7 @@ namespace VabelMitienditaEsc.Models
         public string descripcion { get; set; }
         public decimal monto { get; set; }
         public decimal tasaIVA { get; set; }
-        public string observaciones { get; set; }
+        public string? observaciones { get; set; }
         public int idUsuario { get; set; }
         public int? idProveedor { get; set; }
         public int idCuenta { get; set; }

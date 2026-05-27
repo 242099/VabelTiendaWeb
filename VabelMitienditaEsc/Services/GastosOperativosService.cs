@@ -36,9 +36,9 @@ namespace VabelMitienditaEsc.Services
                         cmd.Parameters.AddWithValue("@descripcion", gasto.descripcion);
                         cmd.Parameters.AddWithValue("@monto", gasto.monto);
                         cmd.Parameters.AddWithValue("@tasa_iva", gasto.tasaIVA);
-                        cmd.Parameters.AddWithValue("@observaciones", gasto.observaciones);
+                        cmd.Parameters.AddWithValue("@observaciones", (Object)gasto.observaciones ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@id_usuario", gasto.idUsuario);
-                        cmd.Parameters.AddWithValue("@id_proveedor", gasto.idProveedor);
+                        cmd.Parameters.AddWithValue("@id_proveedor", (object)gasto.idProveedor ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@id_cuenta", gasto.idCuenta);
                         cmd.Parameters.AddWithValue("@id_forma_pago", gasto.idFormaPago);
                         cmd.Parameters.AddWithValue("@id_tienda", gasto.idTienda);
@@ -208,7 +208,7 @@ namespace VabelMitienditaEsc.Services
                                     descripcion = reader.GetString("descripcion"),
                                     monto = reader.GetDecimal("monto"),
                                     nomUsuario = reader.GetString("nombre_usuario"),
-                                    nombreEmpresaProveedor = reader.GetString("nombre_empresa"),
+                                    nombreEmpresaProveedor = reader.IsDBNull(reader.GetOrdinal("nombre_empresa")) ? "Sin proveedor" : reader.GetString("nombre_empresa"),
                                     formaPago = reader.GetString("nombre")
                                 });
                             }
@@ -266,7 +266,7 @@ namespace VabelMitienditaEsc.Services
                                     descripcion = reader.GetString("descripcion"),
                                     monto = reader.GetDecimal("monto"),
                                     nomUsuario = reader.GetString("nombre_usuario"),
-                                    nombreEmpresaProveedor = reader.GetString("nombre_empresa"),
+                                    nombreEmpresaProveedor = reader.IsDBNull(reader.GetOrdinal("nombre_empresa")) ? "Sin proveedor" : reader.GetString("nombre_empresa"),
                                     formaPago = reader.GetString("nombre")
                                 });
                             }

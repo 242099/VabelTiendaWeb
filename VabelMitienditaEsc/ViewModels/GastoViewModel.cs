@@ -190,7 +190,7 @@ namespace VabelMitienditaEsc.ViewModels
                 DescripcionGasto = gastoCompleto.descripcion;
                 MontoGasto = gastoCompleto.monto;
                 TasaIVAGasto = gastoCompleto.tasaIVA;
-                ObservacionesGasto = gastoCompleto.observaciones ?? string.Empty;
+                ObservacionesGasto = string.IsNullOrWhiteSpace(gastoCompleto.observaciones) ? null : gastoCompleto.observaciones;
                 ProveedorSeleccionado = gastoCompleto.idProveedor;
                 FormaPagoSeleccionada = gastoCompleto.idFormaPago;
                 CuentaSeleccionada = gastoCompleto.idCuenta;
@@ -217,9 +217,9 @@ namespace VabelMitienditaEsc.ViewModels
                     descripcion = DescripcionGasto,
                     monto = MontoGasto,
                     tasaIVA = TasaIVAGasto,
-                    observaciones = ObservacionesGasto,
+                    observaciones = string.IsNullOrWhiteSpace(ObservacionesGasto) ? null : ObservacionesGasto,
                     idUsuario = _mainViewModel.CurrentUser?.IdUsuario ?? 0,
-                    idProveedor = ProveedorSeleccionado,
+                    idProveedor = (ProveedorSeleccionado <= 0) ? null : ProveedorSeleccionado,
                     idFormaPago = FormaPagoSeleccionada,
                     idCuenta = CuentaSeleccionada,
                     idTienda = _mainViewModel.CurrentUser?.IdTienda ?? 0
