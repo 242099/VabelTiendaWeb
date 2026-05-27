@@ -129,5 +129,15 @@ namespace VabelMitienditaEsc.ViewModels
             // Le pasamos el servicio de proveedores que ya tenemos en MainViewModel
             _navigationStore.CurrentViewModel = new ProveedorViewModel(_proveedorService);
         }
+
+        // COMANDO PARA NAVEGAR A INVENTARIO
+        [RelayCommand]
+        private void NavigateToInventario()
+        {
+            _navigationStore.CurrentViewModel = new InventarioViewModel(
+                _navigationStore,
+                this,
+                _inventarioService);
+        }
     }
 }

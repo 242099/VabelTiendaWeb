@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 D:\Github Repositories\Test\VabelTiendaWeb\VabelTiendaWeb\VabelMitienditaEsc\App.xaml
-10-945054297
+11519596382
 1-832987202
-52-208321354
+54626565851
 219-509111150
-MainWindow.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Views\GastoView.xaml;Views\LibretaVentasView.xaml;Views\LobbyView.xaml;Views\LoginEmailView.xaml;Views\LoginPinView.xaml;Views\NuevaVentaView.xaml;Views\ProveedorView.xaml;
+MainWindow.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Views\GastoView.xaml;Views\InventarioView.xaml;Views\LibretaVentasView.xaml;Views\LobbyView.xaml;Views\LoginEmailView.xaml;Views\LoginPinView.xaml;Views\NuevaVentaView.xaml;Views\ProveedorView.xaml;
 
-False
+True
 
