@@ -14,7 +14,7 @@ namespace VabelMitienditaEsc.ViewModels
         private readonly MainViewModel _mainViewModel;
         private readonly GastosOperativosService _gastosService;
         private readonly ProveedorService _proveedorService;
-        private readonly FormasPagoService _formasPagoService;
+        private readonly LibretaVentasService _libretaventasService;
         private readonly CatalogoCuentasService _catalogoCuentasService;
 
         // Propiedades observables para el listado
@@ -44,13 +44,14 @@ namespace VabelMitienditaEsc.ViewModels
 
         public GastoViewModel(NavigationStore navigationStore, MainViewModel mainViewModel,
             GastosOperativosService gastosService, ProveedorService proveedorService,
-            FormasPagoService formasPagoService, CatalogoCuentasService catalogoCuentasService)
+            CatalogoCuentasService catalogoCuentasService, 
+            LibretaVentasService libretaventasService)
         {
             _navigationStore = navigationStore;
             _mainViewModel = mainViewModel;
             _gastosService = gastosService;
             _proveedorService = proveedorService;
-            _formasPagoService = formasPagoService;
+            _libretaventasService = libretaventasService;
             _catalogoCuentasService = catalogoCuentasService;
 
             ListaGastosOperativos = new ObservableCollection<VistaGastoOperativo>();
@@ -83,7 +84,7 @@ namespace VabelMitienditaEsc.ViewModels
                 }
 
                 // Cargar formas de pago
-                var formasPago = await _formasPagoService.Listar();
+                var formasPago = await _libretaventasService.GetFormasPagoAsync();
                 ListaFormasPago.Clear();
                 if (formasPago != null)
                 {

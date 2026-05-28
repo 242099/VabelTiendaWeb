@@ -110,8 +110,8 @@ namespace VabelMitienditaEsc.ViewModels
                 this,
                 _gastosOperativosService,
                 _proveedorService,
-                _formasPagoService,
-                _catalogoCuentasService);
+                _catalogoCuentasService,
+                _libretaventasService);
         }
 
 

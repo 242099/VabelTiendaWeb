@@ -206,8 +206,8 @@
                                    Style="{StaticResource LabelStyle}"/>
 
                         <ComboBox ItemsSource="{Binding ListaFormasPago}"
-                                  SelectedValuePath="idFormaPago"
-                                  DisplayMemberPath="nombre"
+                                  SelectedValuePath="IdFormaPago"
+                                  DisplayMemberPath="Nombre"
                                   SelectedValue="{Binding FormaPagoSeleccionada}"
                                   Style="{StaticResource ModernComboBoxStyle}"/>
 
