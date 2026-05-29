@@ -11,6 +11,7 @@ namespace VabelMitienditaEsc.ViewModels
         private readonly NavigationStore _navigationStore;
         private readonly DatabaseAuthenticationService _authService;
         private readonly MainViewModel _mainViewModel;
+        private readonly TiendaService _tiendaService;
 
         [ObservableProperty]
         private string _email;
@@ -24,11 +25,12 @@ namespace VabelMitienditaEsc.ViewModels
         [ObservableProperty]
         private bool _isLoading;
 
-        public LoginEmailViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService, MainViewModel mainViewModel)
+        public LoginEmailViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService, MainViewModel mainViewModel, TiendaService tiendaService)
         {
             _navigationStore = navigationStore;
             _authService = authService;
             _mainViewModel = mainViewModel;
+            _tiendaService = tiendaService;
         }
 
         [RelayCommand]
@@ -43,7 +45,7 @@ namespace VabelMitienditaEsc.ViewModels
             if (isValid)
             {
                 _mainViewModel.TempEmail = Email;
-                _navigationStore.CurrentViewModel = new LoginPinViewModel(_navigationStore, _authService, _mainViewModel);
+                _navigationStore.CurrentViewModel = new LoginPinViewModel(_navigationStore, _authService, _mainViewModel, _tiendaService);
             }
             else
             {

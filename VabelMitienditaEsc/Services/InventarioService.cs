@@ -221,5 +221,29 @@ namespace VabelMitienditaEsc.Services
                 }
             }
         }
+
+        public async Task<List<Categoria>> GetCategoriasAsync()
+        {
+            var lista = new List<Categoria>();
+            using (MySqlConnection conn = new MySqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+                string query = "SELECT id_categoria, nombre, descripcion FROM categoria";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        lista.Add(new Categoria
+                        {
+                            IdCategoria = reader.GetInt32("id_categoria"),
+                            Nombre = reader.GetString("nombre"),
+                            Descripcion = reader.GetString("descripcion")
+                        });
+                    }
+                }
+            }
+            return lista;
+        }
     }
 }

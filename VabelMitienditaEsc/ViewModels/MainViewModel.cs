@@ -55,7 +55,6 @@ namespace VabelMitienditaEsc.ViewModels
             _ventasService = ventasService;
             _tiendaService = tiendaService;
 
-            // 3. INICIALIZA LOS NUEVOS SERVICIOS
             _gastosOperativosService = gastosOperativosService;
             _proveedorService = proveedorService;
             _formasPagoService = formasPagoService;
@@ -63,7 +62,7 @@ namespace VabelMitienditaEsc.ViewModels
 
             _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
 
-            _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
+            _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this, _tiendaService);
         }
 
         private void OnCurrentViewModelChanged()
@@ -77,7 +76,7 @@ namespace VabelMitienditaEsc.ViewModels
         [RelayCommand]
         private void NavigateToLobby()
         {
-            _navigationStore.CurrentViewModel = new LobbyViewModel(_navigationStore, this);
+            _navigationStore.CurrentViewModel = new LobbyViewModel(this, _tiendaService);
         }
         // Navegación hacia Nueva venta
         [RelayCommand]
@@ -120,7 +119,7 @@ namespace VabelMitienditaEsc.ViewModels
         {
             CurrentUser = null;
             TempEmail = string.Empty;
-            _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this);
+            _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, this, _tiendaService);
         }
 
         [RelayCommand]

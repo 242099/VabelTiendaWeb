@@ -14,6 +14,7 @@ namespace VabelMitienditaEsc.ViewModels
         private readonly NavigationStore _navigationStore;
         private readonly DatabaseAuthenticationService _authService;
         private readonly MainViewModel _mainViewModel;
+        private readonly TiendaService _tiendaService;
 
         [ObservableProperty]
         private string _errorMessage;
@@ -24,11 +25,12 @@ namespace VabelMitienditaEsc.ViewModels
         [ObservableProperty]
         private bool _isLoading;
 
-        public LoginPinViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService, MainViewModel mainViewModel)
+        public LoginPinViewModel(NavigationStore navigationStore, DatabaseAuthenticationService authService, MainViewModel mainViewModel, TiendaService tiendaService)
         {
             _navigationStore = navigationStore;
             _authService = authService;
             _mainViewModel = mainViewModel;
+            _tiendaService = tiendaService;
 
             // Nos suscribimos a los datos del Arduino al entrar a esta vista
             if (_mainViewModel.DispositivoArduino != null)
@@ -64,7 +66,7 @@ namespace VabelMitienditaEsc.ViewModels
 
                     _mainViewModel.CurrentUser = usuarioLogueado;
                     _mainViewModel.TempEmail = string.Empty;
-                    _navigationStore.CurrentViewModel = new LobbyViewModel(_navigationStore, _mainViewModel);
+                    _navigationStore.CurrentViewModel = new LobbyViewModel(_mainViewModel, _tiendaService);
                 }
                 else
                 {
@@ -99,7 +101,7 @@ namespace VabelMitienditaEsc.ViewModels
 
                     _mainViewModel.CurrentUser = usuarioLogueado;
                     _mainViewModel.TempEmail = string.Empty;
-                    _navigationStore.CurrentViewModel = new LobbyViewModel(_navigationStore, _mainViewModel);
+                    _navigationStore.CurrentViewModel = new LobbyViewModel(_mainViewModel, _tiendaService);
                 }
                 else
                 {
@@ -119,7 +121,7 @@ namespace VabelMitienditaEsc.ViewModels
             {
                 _mainViewModel.DispositivoArduino.DataReceived -= OnArduinoDataReceived;
             }
-            _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, _mainViewModel);
+            _navigationStore.CurrentViewModel = new LoginEmailViewModel(_navigationStore, _authService, _mainViewModel, _tiendaService);
         }
 
         private string SecureStringToString(SecureString secureValue)

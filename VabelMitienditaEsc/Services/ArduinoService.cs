@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.IO.Ports;
+using System.Windows;
 
 namespace VabelMitienditaEsc.Services
 {
@@ -22,12 +23,12 @@ namespace VabelMitienditaEsc.Services
                 if (!_serialPort.IsOpen)
                 {
                     _serialPort.Open();
-                    Debug.WriteLine("Arduino conectado.");
+                    MessageBox.Show("Arduino conectado.");
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error al conectar: {ex.Message}");
+                MessageBox.Show($"Error al conectar: {ex.Message}");
             }
         }
 
@@ -36,7 +37,7 @@ namespace VabelMitienditaEsc.Services
             if (_serialPort.IsOpen)
             {
                 _serialPort.Close();
-                Debug.WriteLine("Arduino desconectado.");
+                MessageBox.Show("Arduino desconectado.");
             }
         }
 
@@ -57,7 +58,7 @@ namespace VabelMitienditaEsc.Services
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error al leer datos: {ex.Message}");
+                MessageBox.Show($"Error al leer datos: {ex.Message}");
             }
         }
     }

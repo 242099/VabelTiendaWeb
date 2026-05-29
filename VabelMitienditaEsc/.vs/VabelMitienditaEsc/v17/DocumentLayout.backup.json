@@ -3,76 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\views\\inventarioview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\inventarioview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\views\\gastoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\gastoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\services\\formaspagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\formaspagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\viewmodels\\gastoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\gastoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\viewmodels\\nuevaventaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\nuevaventaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\viewmodels\\loginpinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\loginpinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\services\\libretaventasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\libretaventasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\viewmodels\\loginemailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\loginemailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\viewmodels\\lobbyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\lobbyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\services\\tiendaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\tiendaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\services\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\views\\lobbyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\lobbyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\viewmodels\\inventarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\inventarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\converters\\lobbyconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:converters\\lobbyconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\views\\libretaventasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\libretaventasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\views\\detalleproductoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\detalleproductoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\views\\proveedorview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\proveedorview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\viewmodels\\libretaventasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:viewmodels\\libretaventasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\views\\nuevaventaview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:views\\nuevaventaview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\models\\transaccionhistorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:models\\transaccionhistorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|c:\\users\\abrah\\source\\repos\\versionentrega1\\vabelmitienditaesc\\services\\arduinoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE88DA7-8347-4502-8F5C-A210D507D1D0}|VabelMitienditaEsc.csproj|solutionrelative:services\\arduinoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,61 +54,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAowHEAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "ArduinoService.cs",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\ArduinoService.cs",
+              "RelativeDocumentMoniker": "Services\\ArduinoService.cs",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\ArduinoService.cs",
+              "RelativeToolTip": "Services\\ArduinoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T21:32:52.862Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NuevaVentaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\NuevaVentaViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\NuevaVentaViewModel.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\NuevaVentaViewModel.cs",
-              "RelativeToolTip": "ViewModels\\NuevaVentaViewModel.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAgwFcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T15:50:30.458Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormasPagoService.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\FormasPagoService.cs",
-              "RelativeDocumentMoniker": "Services\\FormasPagoService.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\FormasPagoService.cs",
-              "RelativeToolTip": "Services\\FormasPagoService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDUAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T21:46:13.603Z",
+              "WhenOpened": "2026-05-28T22:03:06.115Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GastoView.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\GastoView.xaml",
-              "RelativeDocumentMoniker": "Views\\GastoView.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\GastoView.xaml",
-              "RelativeToolTip": "Views\\GastoView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-27T21:55:04.501Z",
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAmwHwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T01:00:28.798Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPinViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\LoginPinViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginPinViewModel.cs",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\LoginPinViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginPinViewModel.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAmwHsAAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T03:05:15.402Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LobbyViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\LobbyViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LobbyViewModel.cs",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\LobbyViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LobbyViewModel.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAUwD0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T01:24:59.743Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T03:27:37.999Z",
               "EditorCaption": ""
             },
             {
@@ -153,170 +139,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-27T22:02:35.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InventarioView.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\InventarioView.xaml",
-              "RelativeDocumentMoniker": "Views\\InventarioView.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\InventarioView.xaml",
-              "RelativeToolTip": "Views\\InventarioView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-27T22:26:40.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormaPago.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Models\\FormaPago.cs",
-              "RelativeDocumentMoniker": "Models\\FormaPago.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Models\\FormaPago.cs",
-              "RelativeToolTip": "Models\\FormaPago.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "LoginEmailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\LoginEmailViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginEmailViewModel.cs",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\LoginEmailViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginEmailViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T16:08:51.68Z",
+              "WhenOpened": "2026-05-29T03:20:53.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T03:16:13.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "LibretaVentasService.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\LibretaVentasService.cs",
-              "RelativeDocumentMoniker": "Services\\LibretaVentasService.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\LibretaVentasService.cs",
-              "RelativeToolTip": "Services\\LibretaVentasService.cs",
-              "ViewState": "AgIAAPYAAAAAAAAAAAAQwAIBAACkAAAAAAAAAA==",
+              "Title": "TiendaService.cs",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\TiendaService.cs",
+              "RelativeDocumentMoniker": "Services\\TiendaService.cs",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\TiendaService.cs",
+              "RelativeToolTip": "Services\\TiendaService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T16:09:28.379Z",
+              "WhenOpened": "2026-05-29T03:15:24.705Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GastoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\GastoViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\GastoViewModel.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\GastoViewModel.cs",
-              "RelativeToolTip": "ViewModels\\GastoViewModel.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAwC8AAAA2AAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "LobbyConverters.cs",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Converters\\LobbyConverters.cs",
+              "RelativeDocumentMoniker": "Converters\\LobbyConverters.cs",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Converters\\LobbyConverters.cs",
+              "RelativeToolTip": "Converters\\LobbyConverters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T21:47:06.053Z",
+              "WhenOpened": "2026-05-29T02:56:53.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LobbyView.xaml",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\LobbyView.xaml",
+              "RelativeDocumentMoniker": "Views\\LobbyView.xaml",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\LobbyView.xaml",
+              "RelativeToolTip": "Views\\LobbyView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-29T01:30:33.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
+              "Title": "DetalleProductoView.xaml",
+              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\DetalleProductoView.xaml",
+              "RelativeDocumentMoniker": "Views\\DetalleProductoView.xaml",
+              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\DetalleProductoView.xaml",
+              "RelativeToolTip": "Views\\DetalleProductoView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-27T21:56:00.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "InventarioService.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\InventarioService.cs",
-              "RelativeDocumentMoniker": "Services\\InventarioService.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Services\\InventarioService.cs",
-              "RelativeToolTip": "Services\\InventarioService.cs",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAcwOAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T22:46:40.09Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "InventarioViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\InventarioViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\InventarioViewModel.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\InventarioViewModel.cs",
-              "RelativeToolTip": "ViewModels\\InventarioViewModel.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAwFsBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T22:30:22.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LibretaVentasView.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\LibretaVentasView.xaml",
-              "RelativeDocumentMoniker": "Views\\LibretaVentasView.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\LibretaVentasView.xaml",
-              "RelativeToolTip": "Views\\LibretaVentasView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-27T22:35:38.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ProveedorView.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\ProveedorView.xaml",
-              "RelativeDocumentMoniker": "Views\\ProveedorView.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\ProveedorView.xaml",
-              "RelativeToolTip": "Views\\ProveedorView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-27T22:15:09.938Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwEAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T17:32:50.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LibretaVentasViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\LibretaVentasViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\LibretaVentasViewModel.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\ViewModels\\LibretaVentasViewModel.cs",
-              "RelativeToolTip": "ViewModels\\LibretaVentasViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T21:48:54.854Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "NuevaVentaView.xaml",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\NuevaVentaView.xaml",
-              "RelativeDocumentMoniker": "Views\\NuevaVentaView.xaml",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Views\\NuevaVentaView.xaml",
-              "RelativeToolTip": "Views\\NuevaVentaView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-25T15:35:28.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "TransaccionHistorial.cs",
-              "DocumentMoniker": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Models\\TransaccionHistorial.cs",
-              "RelativeDocumentMoniker": "Models\\TransaccionHistorial.cs",
-              "ToolTip": "C:\\Users\\abrah\\source\\repos\\VersionEntrega1\\VabelMitienditaEsc\\Models\\TransaccionHistorial.cs",
-              "RelativeToolTip": "Models\\TransaccionHistorial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T16:11:29.547Z"
+              "WhenOpened": "2026-05-29T01:35:35.975Z",
+              "EditorCaption": ""
             }
           ]
         }

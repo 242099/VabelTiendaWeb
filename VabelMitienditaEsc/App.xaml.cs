@@ -15,15 +15,15 @@ namespace VabelMitienditaEsc
         {
             base.OnStartup(e);
 
-            // 1. Construir la configuración leyendo los User Secrets
+            // Construir la configuración leyendo los User Secrets
             IConfiguration configuration = new ConfigurationBuilder()
                 .AddUserSecrets<App>()
                 .Build();
 
-            // 2. Extraer la cadena de conexión
+            // Extraer la cadena de conexión
             string connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            // 3. Inicializar el servicio real con la base de datos
+            // Inicializar el servicio real con la base de datos
             DatabaseAuthenticationService authService = new DatabaseAuthenticationService(connectionString);
             NavigationStore navigationStore = new NavigationStore();
             LibretaVentasService libretaventasService = new LibretaVentasService(connectionString);
@@ -31,7 +31,7 @@ namespace VabelMitienditaEsc
             VentasService ventasService = new VentasService(connectionString);
             TiendaService tiendaService = new TiendaService(connectionString);
 
-            // --- NUEVOS SERVICIOS PARA LA VISTA DE GASTOS ---
+            // --- SERVICIOS PARA LA VISTA DE GASTOS ---
             GastosOperativosService gastosService = new GastosOperativosService(connectionString);
             ProveedorService proveedorService = new ProveedorService(connectionString);
             FormasPagoService formasPagoService = new FormasPagoService(connectionString);
@@ -50,9 +50,8 @@ namespace VabelMitienditaEsc
                 formasPagoService,
                 catalogoCuentasService);
 
-            // 4. Inicializar y conectar el servicio de Arduino
-            // Recuerda modificar "COM3" por el puerto asignado a tu Arduino en el Administrador de dispositivos.
-            mainViewModel.DispositivoArduino = new ArduinoService("COM5");
+            // Inicializar y conectar el servicio de Arduino
+            mainViewModel.DispositivoArduino = new ArduinoService("COM4");
             mainViewModel.DispositivoArduino.Connect();
 
             MainWindow window = new MainWindow
